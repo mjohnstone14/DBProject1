@@ -1,0 +1,29 @@
+body {
+    max-width: 740px;
+    background-color: black;
+    color: beige;
+  }
+  h1 {
+    font-size: 300%
+  }
+  h1 + h2 {
+    margin-top: -.5em;
+    font-size: 200%;
+    margin-bottom: 0;
+  }
+  small {
+    display: block;
+    font-size: 120%;
+    color: beige;
+    text-align: center;
+  }
+  ol li {
+    font-size: 14pt;
+    transition: color .2s ease-in-out;
+    color: beige;
+    cursor: default;
+    padding: .5em 0;
+  }
+  ol li:hover {
+    color: #eee8d5;
+  }

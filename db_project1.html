@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel ="stylesheet" type = "text/css" href="core.css">
+    <h1>DB Project 1, Greenhouse Goons</h1>
+  </head>
+  <body>
+    <hr> </hr>
+      <img src="http://mathcs.pugetsound.edu/~dchiu/figs/me-twofirs.jpg" style="border:1px solid black;max-width:100%;"></a>
+   	<hr> </hr>
+    <div>
+      <h5>1. What command can you type into the terminal to check if apache is currently running?</h5>
+      
+      <p>service apache2 status</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>2. Apache implements the HTTP protocol. The protocol is extremely simple, with just a few commands. What is the difference between the GET, POST, and HEAD commands?</h5>
+      
+      <p>GET retrieves whatever information is identified by the request URI. HEAD is the same as GET but must not return a body message in the response. POST requests that the server take your data and insert it into the database.</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>3. To Apache, what is the difference between ServerRoot and DocumentRoot?
+      </h5>
+      
+      <p>ServerRoot is the path to the webserver executable. DocumentRoot is the path to your files that are delivered by the webserver.</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>4. What port does your web server listen to for HTTP connections from browsers by default? Test it out by typing this into your browser: http://ip_addr:port, where ip_addr is the IP address of your server, and port is the port number given in the configuration file. Try changing the port number to something else. Test it again in your browser, then change it back. The fact that you don't usually need to specify the port when going to a URL should tell you that the default port to access web servers is the one given in the config file.
+
+      </h5>
+      
+      <p>The default port for HTTP connections is 80. We were able 90 and back to 80.</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>5. In what directory do you need to place all of your HTML and PHP documents for Apache to serve them up? Test it by navigating to this directory, and if your hunch is right, you should find that default It Worked! HTML document you saw when you pointed your web browser to your IP address.
+      </h5>
+      
+      <p>/var/www/html/ holds the html. This is where the default apache page leads you, but index.html is also located at /usr/share/apache2/default-site. Php docs will most likely live in a new directory called /var/www/php.</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>6. What file contains all of Apache's traffic logs? What about apache's error logs? These things tend to get very long, with the most recent logged events being appended to the end of the file. What are some ways you can view the last few lines of a file? </h5>
+      
+      <p>Apache stores its traffic logs in access.log and its error logs in error.log. These both live in var/log/apache2. To view the last lines of the files in nano, do ^_ to go to a specific line and then hit ^V to select the last line. </p>
+    </div>
+   	<hr> </hr>
+		  <div>
+      <h5>7. What is a Directory Index file? Why would it be nice to have one in each directory?
+      </h5>
+      
+      <p>A directory index file specifies which html or php file to default to when a directory is accessed. It would be nice to have one in each directory so that when a user accesses a directory it will always have something to default to and wont show them error. 
+</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>8. How do you give every user on your Linux server their own web space? Enable it now!
+      </h5>
+      
+      <p>To give every user their own webspace, you must enable the userdir module 
+within the module configuration. To do this, run “sudo a2endmod userdir” and 
+restart apache.</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>9. How do you create a password-protected directory (like I did for the class notes)? Look into htpasswd and .htaccessfiles.</h5>
+      
+      <p>First, create a .htaccess file in a new directory, /var/www/html/protected. Then, 	create a new .htpasswd file in a new directory called htpassword (it doesn’t matter where this directory is.)</br>To create the .htpasswd file, just do {path}/htpasswd -c /etc/htpasswd/.htpasswd {username}.</br>
+Then enter the password. In the .htaccess file from before,  with contents: <br /><br />
+AuthType Basic<br />
+AuthName “Authentication Required”<br />
+AuthUserFile “/etc/htpasswd/.htpasswd”<br />
+Require valid-user
+<br /><br />
+Then, in httpd.conf, create a <Directory “/var/www/html/protected”> block and include the line “AllowOverride AuthConfig”. After that, include the options you want to use for the directory.</p>
+    </div>
+   	<hr> </hr>
+	  <div>
+      <h5>10. When the browser tries to access a page that doesn't exist, the HTTP protocol issues a 404 error code. Try it by navigating to a non-existent page on your server. Kind of an unhelpful and ungraceful way of telling users a page doesn't exist, right? Well, there's a way to send the browser to a particular page instead. For instance, if you go to this non-existent page on our school's website http://cs.pugetsound.edu/david_awesome.html, you'll just get brought back to the department home page. How do you do the automatic redirect given a 404 error? </h5>
+      
+      <p>In the VirtualHost block in the sites-enabled config file (000-default.conf), add 
+an ErrorDocument 404 directive with the name of the html page to redirect to 
+afterwards.</p>
+    </div>
+   	<hr> </hr>
+  </body>
+</html>
