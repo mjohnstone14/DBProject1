@@ -16,7 +16,7 @@
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             //return all passengers, and store the result set
-            $query_str = "select * from passengers;";
+            $query_str = "select * from passengers where ssn='$_GET[passenger_ssn]';";
             $result_set = $db->query($query_str);
 
             //loop through each tuple in result set and print out the data
@@ -24,6 +24,10 @@
             foreach($result_set as $tuple) {
                  echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]<br/>\n";
             }
+
+            echo "<br/>";
+            echo "$_GET[passenger_ssn]";
+
 
             //disconnect from db
             $db = null;
