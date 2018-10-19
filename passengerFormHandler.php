@@ -19,8 +19,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location: passengerForm.html');
         exit;
     } else {
-        header("Location: showPassengers.php");
-        echo $first_name;
+        
+        //echo $first_name;
         //some possible code
         try{
         $db = new PDO('sqlite:./myDB/airport.db');
@@ -37,6 +37,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         } catch(PDOException $e) {
          die('Exception : '.$e->getMessage());
          }
+
+        header("Location: showPassengers.php");
         
     }
 }
