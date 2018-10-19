@@ -28,7 +28,7 @@
             foreach($result_set as $tuple) {
                  echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
 
-                 echo "<form action="passengerForm.html" method="post">
+                 echo "<form action="/passengerForm.html" method="post">
                  <input type="hidden" name="ssn" value=$tuple[ssn]/>
                  <input type="hidden" name="first_name" value=$tuple[f_name]/>
                  <input type="hidden" name="m_name" value=$tuple[m_name]/>
