@@ -7,18 +7,20 @@
 <body>   
 <div class="content">
     <form action="passengerFormHandler.php" method="POST">
-        <label>First Name: </label>
-        <input name="first_name" type="text" size="25" />
-
-        <label>Middle Name: </label>
-        <input name="m_name" type="text" size="25" />
-
-        <label>Last Name: </label>
-        <input name="last_name" type="text" size="25" />
-
-        <label>SSN: </label>
-        <input name="SSN" type="text" size="25" />
+        <div>
+            <label for="first_name">First Name: <abbr title="required">*</abbr></label>
+            <input id="first_name" type="text" name="first_name" size = "25">
         
+            <label for="m_name">Middle Name: </label>
+            <input id="m_name" type="text" name="m_name" size = "25">
+        
+            <label for="last_name">Last Name: <abbr title="required">*</abbr></label>
+            <input id="last_name" type="text" name="last_name" size = "25">
+     
+            <label for="ssn">SSN: <abbr title="required">*</abbr></label>
+            <input id="ssn" type="text" name="ssn" size = "25">
+        </div>
+     
         <input name="mySubmit" type="submit" value="Submit!" />
     </form>
 </div>
