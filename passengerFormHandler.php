@@ -37,8 +37,7 @@ if(empty($first_name) || !is_string($first_name) || preg_match('#[0-9]#', $first
     $db = null;
     } catch(PDOException $e) {
      die('Exception : '.$e->getMessage()); }
-    redirect
-    header("Location: showPassengers_secure.php");
+    header("Location: showPassengers.php");
 }
 
 ?>
