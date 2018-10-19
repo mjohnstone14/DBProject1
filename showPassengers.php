@@ -20,22 +20,23 @@
             //$result_set = $db->query($query_str);
 
             //prepared statement for select
-            $stmt = $db->prepare("SELECT * FROM passengers");
+            $stmt = $db->prepare('SELECT * FROM passengers');
             $result = $stmt->execute();
-            $result_set = $result->fetchArray();
+            $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
             //loop through each tuple in result set and print out the data
             //ssn will be shown in blue (see below)
             foreach($result_set as $tuple) {
                  echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
 
-                 echo "<form action="/passengerForm.html" method="post">
-                 <input type="hidden" name="ssn" value=$tuple[ssn]/>
-                 <input type="hidden" name="first_name" value=$tuple[f_name]/>
-                 <input type="hidden" name="m_name" value=$tuple[m_name]/>
-                 <input type="hidden" name="last_name" value=$tuple[lname]/>
-                 <button name="update" type="submit"></button>
-                 </form></br>/n";
+                 echo "<form action='passengerForm.html' method='post'>
+                 <input type='hidden' name='ssn' value=$tuple[ssn]/>
+                 <input type='hidden' name='first_name' value=$tuple[f_name]/>
+                 <input type='hidden' name='m_name' value=$tuple[m_name]/>
+                 <input type='hidden' name='last_name' value=$tuple[l_name]/>
+                 <button name='update' type='submit'>UPDATE</button>
+                 </form></br>";
             }
+
 
             //echo "<br/>";
             //echo "$_GET[passenger_ssn]";
