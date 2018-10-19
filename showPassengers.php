@@ -34,7 +34,7 @@
                  <input type="hidden" name="m_name" value=$tuple[m_name]/>
                  <input type="hidden" name="last_name" value=$tuple[lname]/>
                  <button name="update" type="submit"></button>
-                 </form></br>/n"
+                 </form></br>/n";
             }
 
             //echo "<br/>";
