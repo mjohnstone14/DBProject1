@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         try{
         $db = new PDO('sqlite:./myDB/airport.db');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $db->prepare("UPDATE passengers (f_name,m_name,l_name,ssn) set f_name=:f_name,m_name=:m_name,l_name=:l_name,ssn=:ssn where ssn=:oldssn");
+        $stmt = $db->prepare("UPDATE passengers set f_name=:f_name,m_name=:m_name,l_name=:l_name,ssn=:ssn where ssn=:oldssn");
         //bind to post values
         $stmt->bindParam(':f_name', $first_name);
         $stmt->bindParam(':m_name', $m_name);
