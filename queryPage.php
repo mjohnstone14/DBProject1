@@ -7,9 +7,8 @@
     <body>
     <div class="content">
         <form action="showPassengers.php" method="get">
-            SSN: <input name="passenger_ssn" type="text" size="25" />
-
-            <input name="mySubmit" type="submit" value="submit" />
+            Select Query: <input name="statement" type="text" size="75" />
+          <input name="submit" type="submit" action="queryPage.php">
         </form>
     </div>
     <?php
@@ -20,9 +19,19 @@
         $db = new PDO('sqlite:' . $db_file);
         //set errormode to use exceptions
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $db->prepare("SELECT * from  passengers  where :statement");
+        //bind to post values
+        $stmt->bindParam(':statement',$_GET["statement"]);
+        $stmt->execute();
+        //disconnect
+        $db = null;
+         $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach($result_set as $tuple) {
+                 echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
+        }
 
-        $stmt = $db->prepare("SELECT * FROM PASSENGERS where ssn = ?");
-      
+        // placeholder must be used in the place of the whole value
+
     } catch(PDOException $e) {
         die('Exception : '.$e->getMessage());
     }
