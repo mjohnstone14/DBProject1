@@ -25,14 +25,11 @@
            $stmt->bindParam(':statement',$_POST["statement"]);
            $stmt->execute();
            //disconnect
-           $db = null;
             $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
            foreach($result_set as $tuple) {
-                    echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple   [l_name]";
+                    echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
            }
-
-           // placeholder must be used in the place of the whole value
-
+           $db = null;
        } catch(PDOException $e) {
            die('Exception : '.$e->getMessage());
        }
