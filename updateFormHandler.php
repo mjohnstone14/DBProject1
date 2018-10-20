@@ -52,7 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         } catch(PDOException $e) {
          die('Exception : '.$e->getMessage());
          }
-        $message = "success";
+        $message = "update";
         header("Location: showPassengers.php?".$message);
 
     }

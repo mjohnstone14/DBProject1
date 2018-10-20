@@ -7,6 +7,9 @@
     if(isset($_GET['success'])) {
         echo "<font color = 'green'> Entry successfully placed! <br></font>";
     }
+    if(isset($_GET['update'])) {
+        echo "<font color = 'green'> Update successfully made! <br></font>";
+    }
     ?>
     <?php
 
