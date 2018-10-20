@@ -4,6 +4,11 @@
 <h2>List of all passengers</h2>
 <p>
     <?php
+    if(isset($_GET['success'])) {
+        echo "<font color = 'green'> Entry successfully placed! <br></font>";
+    }
+    ?>
+    <?php
 
         //path to the SQLite database file
         $db_file = './myDB/airport.db';
@@ -28,15 +33,14 @@
             foreach($result_set as $tuple) {
                  echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
 
-                 echo "<form action='passengerForm.html' method='post'>
-                 <input type='hidden' name='ssn' value=$tuple[ssn]/>
-                 <input type='hidden' name='first_name' value=$tuple[f_name]/>
-                 <input type='hidden' name='m_name' value=$tuple[m_name]/>
-                 <input type='hidden' name='last_name' value=$tuple[l_name]/>
+                 echo "<form action='./updateForm.php' method='POST'>
+                 <input type='hidden' name='ssn' value=$tuple[ssn]>
+                 <input type='hidden' name='first_name' value=$tuple[f_name]>
+                 <input type='hidden' name='m_name' value=$tuple[m_name]>
+                 <input type='hidden' name='last_name' value=$tuple[l_name]>
                  <button name='update' type='submit'>UPDATE</button>
                  </form></br>";
             }
-
 
             //echo "<br/>";
             //echo "$_GET[passenger_ssn]";
