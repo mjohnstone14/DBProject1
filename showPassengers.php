@@ -9,11 +9,6 @@
     }
     ?>
     <?php
-    if(isset($_GET['success'])) {
-        echo "<font color = 'green'> Entry successfully placed! <br></font>";
-    }
-    ?>
-    <?php
 
         //path to the SQLite database file
         $db_file = './myDB/airport.db';
