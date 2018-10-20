@@ -9,24 +9,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(empty($first_name) || !is_string($first_name) || preg_match('#[0-9]#', $first_name)) {
         $error = "error=true";
-        header('Location: updateForm.html');
-        exit;
     } else if(empty($last_name) || !is_string($first_name) || preg_match('#[0-9]#', $last_name)) {
         if(isset($error)) {
             $error .= "&error2=true";
         } else {
             $error = "error2=true";
         }
-        header('Location: updateForm.html');
-        exit;
     } else if(empty($ssn)) {
         if(isset($error)) {
             $error .= "&error3=true";
         } else {
             $error = "error3=true";
         }
-        header('Location: updateForm.html');
-        exit;
     }
     else if(strlen($ssn) != 11) {
         if(isset($error)) {
@@ -34,12 +28,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $error = "error4=true";
         }
-        header('Location: updateForm.html');
-        exit;
     }
 
         if(isset($error)) {
-        header('Location: updateForm.html?' . $error);
+        header('Location: updateForm.php?' . $error);
     } else {
 
         //echo $first_name;

@@ -6,6 +6,22 @@
     <h1>Update Passenger</h1>
 </head>
 <body>
+<p>
+<?php
+ if(isset($_GET['error'])) {
+     echo "<font color = 'red'> Please enter a valid first name <br></font>";
+ }
+ if(isset($_GET['error2'])) {
+    echo "<font color = 'red'> Please enter a valid last name <br></font>";
+ }
+ if(isset($_GET['error3'])) {
+    echo "<font color = 'red'> SSN must be provided <br></font>";
+ }
+ if(isset($_GET['error4'])) {
+    echo "<font color = 'red'> SSN must be 11 characters long <br></font>";
+ }
+?>
+</p>
  <div class='content'>
     <form action='updateFormHandler.php' method='POST'>
         <div>
