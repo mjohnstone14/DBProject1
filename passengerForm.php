@@ -27,6 +27,15 @@
         <div>
             <label for="first_name">First Name: <abbr title="required">*</abbr></label>
             <input id="first_name" type="text" name="first_name" size = "25">
+<<<<<<< HEAD:passengerForm.php
+        
+            <label for="m_name">Middle Name: </label>
+            <input id="m_name" type="text" name="m_name" size = "25">
+        
+            <label for="last_name">Last Name: <abbr title="required">*</abbr></label>
+            <input id="last_name" type="text" name="last_name" size = "25">
+     
+=======
 
             <label for="m_name">Middle Name: </label>
             <input id="m_name" type="text" name="m_name" size = "25">
@@ -34,6 +43,7 @@
             <label for="last_name">Last Name: <abbr title="required">*</abbr></label>
             <input id="last_name" type="text" name="last_name" size = "25">
 
+>>>>>>> 0e2c3c09693251163eb77a29f323ac81ae8e1fe6:passengerForm.php
             <label for="ssn">SSN: <abbr title="required">*</abbr></label>
             <input id="ssn" type="text" name="ssn" size = "25">
         </div>

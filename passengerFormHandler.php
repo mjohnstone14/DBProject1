@@ -9,8 +9,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(empty($first_name) || !is_string($first_name) || preg_match('#[0-9]#', $first_name)) {
         $error = "error=true";
-    } else if(empty($last_name) || !is_string($last_name) || preg_match('#[0-9]#', $last_name)){
-        if(isset($error))  {
+    } else if(empty($last_name) || !is_string($last_name) || preg_match('#[0-9]#', $last_name)) {
+        if(isset($error)) {
             $error .= "&error2=true";
         } else {
             $error = "error2=true";
@@ -40,10 +40,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         try{
         $db = new PDO('sqlite:./myDB/airport.db');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $db->prepare("INSERT INTO passengers (f_name,m_name,l_name,ssn) VALUES (f_name,:m_name,:l_name,:ssn)");
-
+        $stmt = $db->prepare("INSERT INTO passengers (f_name,m_name,l_name,ssn) VALUES (:f_name,:m_name,:l_name,:ssn)");
         //bind to post values
-
         $stmt->bindParam(':f_name', $first_name);
         $stmt->bindParam(':m_name', $m_name);
         $stmt->bindParam(':l_name', $last_name);
