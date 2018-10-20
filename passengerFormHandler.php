@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($first_name) || !is_string($first_name) || preg_match('#[0-9]#', $first_name)) {
         $error = "error=true";
     } else if(empty($last_name) || !is_string($last_name) || preg_match('#[0-9]#', $last_name)){
-        if(isset($error)) {
+        if(isset($error))  {
             $error .= "&error2=true";
         } else {
             $error = "error2=true";
