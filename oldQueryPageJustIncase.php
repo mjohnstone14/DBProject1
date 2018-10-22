@@ -6,8 +6,8 @@
     </head>
     <body>
     <div class="content">
-        <form action="queryPage.php" method="POST">
-            select from passengers where  <input name="statement" type="text" size="75" />
+        <form action="oldQueryPageJustIncase.php" method="POST">
+            select from passengers where  <input id="statement" name="statement" type="text" size="75" />
           <input name="submit" type="submit">
         </form>
     </div>
@@ -22,13 +22,13 @@
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            $stmt = $db->prepare('SELECT * from  passengers WHERE :statement;');
            //bind to post values
-           $stmt->bindParam(":statement",$_POST["statement"]);
+           $stmt->bindParam(':statement',$_POST["statement"]);
            $stmt->execute();
            //disconnect
            $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
            var_dump($result_set);
            foreach($result_set as $tuple) {
-                    echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
+                    echo "<font color='white'>$tuple[ssn] $tuple[f_name] $tuple[m_name] $tuple[l_name]</font>";
            }
            $db = null;
        } catch(PDOException $e) {
