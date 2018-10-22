@@ -16,7 +16,7 @@
        try {
            //path to the SQLite database file
            $db_file = './myDB/airport.db';
-           $echo $_POST["statement"];
+           echo $_POST["statement"];
            $db = new PDO('sqlite:' . $db_file);
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
