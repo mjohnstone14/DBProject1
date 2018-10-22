@@ -1,9 +1,5 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $first_name = $_POST["first_name"];
-    $m_name = $_POST["m_name"];
-    $last_name = $_POST["last_name"];
-    $ssn = $_POST["ssn"];
     $error = NULL;
     $message = NULL;
 
@@ -31,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if(isset($error)) {
-        header('Location: queryPage.php?'.$error);
+        header("Location: queryPage.php?".$error);
         exit;
     } else {
 
@@ -45,23 +41,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                $db = new PDO('sqlite:' . $db_file);
                //set errormode to use exceptions
                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-               $stmt = $db->prepare('SELECT * from  passengers WHERE :statement;');
+               $stmt = $db->prepare("SELECT * from  passengers WHERE :statement;");
                //bind to post values
-               $stmt->bindParam(":statement",$_POST["statement"]);
+               $stmt->bindParam(':statement',$_POST["statement"]);
                $stmt->execute();
                //disconnect
                $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
-               var_dump($result_set);
-               foreach($result_set as $tuple) {
-                        echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
-               }
+               //foreach($result_set as $tuple) {
+                 //       echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
+               //}
                $db = null;
            } catch(PDOException $e) {
                die('Exception : '.$e->getMessage());
            }
         }
         $message = "success";
-        header("Location: queryPage.php?".$message);
+        header("Location: queryPage.php?results=$result_set".$message);
 
     }
 }
