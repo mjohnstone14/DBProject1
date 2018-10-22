@@ -16,11 +16,11 @@
        try {
            //path to the SQLite database file
            $db_file = './myDB/airport.db';
-
+           $echo $_POST["statement"];
            $db = new PDO('sqlite:' . $db_file);
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-           $stmt = $db->prepare('SELECT * from  passengers WHERE :statement;');
+           $stmt = $db->prepare("SELECT * from  passengers WHERE :statement;");
            //bind to post values
            $stmt->bindParam(':statement',$_POST["statement"]);
            $stmt->execute();
