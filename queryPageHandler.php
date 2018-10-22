@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
            }
         }
         $message = "success";
-        header("Location: queryPage.php?results=$result_set&statement=$statement".$message);
+        header("Location: queryPage.php?results=$result_set&statement=$statement");
 
     }
 }
