@@ -15,9 +15,10 @@
     <?php 
         if(isset($_GET["results"])){
             $result_set = $_GET["results"];
-            echo $result_set;
+            echo $result_set||"\n";
+            echo $_GET["statement"];
               foreach($result_set as $tuple) {
-                echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]";
+                echo "<font color='white'>$tuple[ssn] $tuple[f_name] $tuple[m_name] $tuple[l_name]</font>";
                }
         }
     ?>
