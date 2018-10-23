@@ -14,16 +14,16 @@
     <?php
     if(isset($_POST["statement"])){
        try {
-           //path to the SQLite database file
-           $db_file = './myDB/airport.db';
            $inputStatement = $_POST["statement"];
+           $inputStatement = array_pop(array_reverse(preg_split($inputStatement)));
+                   //path to the SQLite database file
+           $db_file = './myDB/airport.db';
            echo $inputStatement; echo "</br>";
            $db = new PDO('sqlite:' . $db_file);
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-           $stmt = $db->prepare("SELECT * FROM passengers WHERE ? ;");
+           $stmt = $db->prepare("SELECT * FROM passengers WHERE ".$inputStatement);
            //bind to post values
-           $stmt->bindParam(1,$inputStatement);
            echo $stmt->queryString."</br>";
            $stmt->execute();
            //$stmt->execute(array($inputStatement));
