@@ -25,7 +25,7 @@
            //bind to post values
            //$stmt->bindParam('s',$inputStatement);
            $stmt->execute(array($inputStatement));
-           var_dump($stmt->errorInfo);
+           var_dump($stmt->$errorInfo);
            //disconnect
            //$result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
            while ($row = $stmt->fetch()){
