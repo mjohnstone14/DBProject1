@@ -23,7 +23,7 @@
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            $stmt = $db->prepare("SELECT * FROM passengers WHERE ".$inputStatement.";");
            //bind to post values
-           echo $stmt->queryString.": </br>";
+           echo "Results for ".$stmt->queryString."</br></br>";
            $stmt->execute();
            //$stmt->execute(array($inputStatement));
            //disconnect
