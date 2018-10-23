@@ -24,8 +24,8 @@
            $stmt = $db->prepare("SELECT * FROM passengers WHERE ? ;");
            echo $stmt->queryString;
            //bind to post values
-           //$stmt->bindParam('s',$inputStatement);
-           $stmt->execute(array($inputStatement));
+           $stmt->bindParam('?',$inputStatement);
+           //$stmt->execute(array($inputStatement));
            //disconnect
            $result_set = $stmt->fetchAll();
            while ($row = $stmt->fetch()){
