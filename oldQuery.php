@@ -15,7 +15,7 @@
     if(isset($_POST["statement"])){
        try {
            $inputStatement = $_POST["statement"];
-           $inputStatement = array_pop(array_reverse(preg_split(";",$inputStatement)));
+           $inputStatement = array_pop(array_reverse(preg_split(";",$inputStatement.";")));
                    //path to the SQLite database file
            $db_file = './myDB/airport.db';
            echo $inputStatement; echo "</br>";
