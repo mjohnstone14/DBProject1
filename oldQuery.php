@@ -25,8 +25,12 @@
            //bind to post values
            //$stmt->bindParam('s',$inputStatement);
            $stmt->execute(array($inputStatement));
+           var_dump($stmt->errorInfo);
            //disconnect
-           $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+           //$result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+           while ($row = $stmt->fetch()){
+            echo $row; echo "</br>";
+           }
            var_dump($result_set);
            foreach($result_set as $tuple) {
                     echo "<font color='white'>$tuple[ssn] $tuple[f_name] $tuple[m_name] $tuple[l_name]</font>";
