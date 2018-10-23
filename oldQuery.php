@@ -22,12 +22,13 @@
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            $stmt = $db->prepare("SELECT * FROM passengers WHERE ? ;");
-           echo $stmt->queryString."</br>";
            //bind to post values
            $stmt->bindParam(1,$inputStatement);
+           echo $stmt->queryString."</br>";
+           $stmt->execute();
            //$stmt->execute(array($inputStatement));
            //disconnect
-           $result_set = $stmt->fetchAll();
+           $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
            var_dump($result_set);
            foreach($result_set as $tuple) {
                     echo "<font color='white'>$tuple[ssn] $tuple[f_name] $tuple[m_name] $tuple[l_name]</font>";
