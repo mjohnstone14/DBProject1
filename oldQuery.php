@@ -22,6 +22,7 @@
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            $stmt = $db->prepare("SELECT * FROM passengers WHERE ? ;");
+           echo $stmt->queryString;
            //bind to post values
            //$stmt->bindParam('s',$inputStatement);
            $stmt->execute(array($inputStatement));
