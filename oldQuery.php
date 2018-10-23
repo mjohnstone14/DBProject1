@@ -18,18 +18,20 @@
            //$inputStatement = array_pop(array_reverse(preg_split(";",($inputStatement."; "))));
                    //path to the SQLite database file
            $db_file = './myDB/airport.db';
-           echo $inputStatement; echo "</br>";
            $db = new PDO('sqlite:' . $db_file);
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            $stmt = $db->prepare("SELECT * FROM passengers WHERE ".$inputStatement.";");
            //bind to post values
-           echo $stmt->queryString."</br>";
+           echo $stmt->queryString.": </br>";
            $stmt->execute();
            //$stmt->execute(array($inputStatement));
            //disconnect
            $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
-           var_dump($result_set);
+           if(sizeof($result_set)==0){
+            echo "No results to display for $inputStatement";
+           }
+
            foreach($result_set as $tuple) {
                     echo "<font color='white'>$tuple[ssn] $tuple[f_name] $tuple[m_name] $tuple[l_name]</font>";
            }
