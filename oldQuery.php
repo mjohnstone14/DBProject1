@@ -6,7 +6,7 @@
     </head>
     <body>
     <div class="content">
-        <form action="oldQueryPageJustIncase.php" method="POST">
+        <form action="oldQuery.php" method="POST">
             select from passengers where  <input id="statement" name="statement" type="text" size="75" />
           <input name="submit" type="submit">
         </form>
