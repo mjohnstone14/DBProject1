@@ -22,7 +22,7 @@
            $db = new PDO('sqlite:' . $db_file);
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-           $stmt = $db->prepare("SELECT * FROM passengers WHERE ".$inputStatement);
+           $stmt = $db->prepare("SELECT * FROM passengers WHERE ".$inputStatement.";");
            //bind to post values
            echo $stmt->queryString."</br>";
            $stmt->execute();
