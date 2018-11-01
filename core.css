@@ -2,6 +2,7 @@ body {
     max-width: 740px;
     background-color: black;
     color: beige;
+    margin-left: 7em
   }
   h1 {
     font-size: 300%
