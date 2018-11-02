@@ -14,7 +14,7 @@
     <?php
 
         //path to the SQLite database file
-        $db_file = './myDB/airport.db';
+        $db_file = '../myDB/airport.db';
 
         try {
             //open connection to the airport database file

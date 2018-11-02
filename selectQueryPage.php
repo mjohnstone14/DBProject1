@@ -17,7 +17,7 @@
            $inputStatement = $_POST["statement"];
            //$inputStatement = array_pop(array_reverse(preg_split(";",($inputStatement."; "))));
                    //path to the SQLite database file
-           $db_file = './myDB/airport.db';
+           $db_file = '../myDB/airport.db';
            $db = new PDO('sqlite:' . $db_file);
            //set errormode to use exceptions
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

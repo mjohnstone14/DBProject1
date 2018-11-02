@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         if(isset($_POST["statement"])){
            try {
                //path to the SQLite database file
-               $db_file = './myDB/airport.db';
+               $db_file = '../myDB/airport.db';
 
                $db = new PDO('sqlite:' . $db_file);
                //set errormode to use exceptions

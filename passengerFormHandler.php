@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         //echo $first_name;
         //some possible code
         try{
-        $db = new PDO('sqlite:./myDB/airport.db');
+        $db = new PDO('sqlite:../myDB/airport.db');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $db->prepare("INSERT INTO passengers (f_name,m_name,l_name,ssn) VALUES (:f_name,:m_name,:l_name,:ssn)");
         //bind to post values
