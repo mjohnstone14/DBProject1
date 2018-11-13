@@ -37,7 +37,7 @@ CREATE TABLE Trades(
     cardID1 INTEGER NOT NULL,
     cardID2 INTEGER NOT NULL,
 
-    foreign key (initiator,reciever) references User(username,username) on update cascade on delete cascade,
+    foreign key (initiator,receiver) references User(username,username) on update cascade on delete cascade,
     foreign key (cardID1,cardID2) references Card(cardID,cardID) on update cascade on delete cascade
 
 );
