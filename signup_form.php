@@ -15,7 +15,7 @@
      
       if($errMsg == ''){
         try {
-          $stmt = $db->prepare('INSERT INTO pdo (username, password, level) VALUES (:username, :password, :level)');
+          $stmt = $db->prepare('INSERT INTO user (username, password, level) VALUES (:username, :password, :level)');
           $stmt->execute(array(
             ':username' => $username,
             ':password' => $password,
