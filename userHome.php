@@ -20,8 +20,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>Spitting Image</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Create Cards</a>
-    <a href="#" class="w3-bar-item w3-button">Build Deck</a>
+    <a href="imageUploader.html" class="w3-bar-item w3-button">Create Cards</a>
+    <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
     <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn"> -->
       <!-- Jeans <i class="fa fa-caret-down"></i> -->
     </a>
@@ -137,10 +137,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   <!-- Subscribe section -->
   <div class="w3-container w3-black w3-padding-32">
-    <h1>Subscribe</h1>
-    <p>To get special offers and VIP treatment:</p>
+    <h1>Search</h1>
+    <p>To find users by username!</p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Search</button>
   </div>
 
   <!-- Footer -->
