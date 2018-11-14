@@ -4,7 +4,7 @@
       $db = new PDO('sqlite:' . $db_file);
 
       $errMsg = '';
-      // Get data from FROM
+      // Get data from FORM
       $username = $_POST['username'];
       $password = $_POST['password'];
       $level = '1';
@@ -16,7 +16,7 @@
      
       if($errMsg == ''){
         try {
-          $stmt = $db->prepare('INSERT INTO user (username, password, level) VALUES (:username, :password, :level)');
+          $stmt = $db->prepare('INSERT INTO User (username, password, level) VALUES (:username, :password, :level)');
           $stmt->execute(array(
             ':username' => $username,
             ':password' => $password,

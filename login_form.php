@@ -13,7 +13,7 @@
 			$errMsg = 'Enter password';
 		if($errMsg == '') {
 			try {
-				$stmt = $db->prepare('SELECT username, password, level FROM user WHERE username = :username');
+				$stmt = $db->prepare('SELECT username, password, level FROM User WHERE username = :username');
 				$stmt->execute(array(
 					':username' => $username
 					));
