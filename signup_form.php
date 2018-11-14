@@ -31,7 +31,7 @@
       }
     }
     if(isset($_GET['action']) && $_GET['action'] == 'joined') {
-      $errMsg = 'Registration successful. Now you can <a href="login.php">login</a>';
+      $errMsg = 'Registration successful. Now you can <a href="login_form.php">login</a>';
     }
 ?>
 <html>
