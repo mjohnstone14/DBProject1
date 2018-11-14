@@ -19,6 +19,7 @@
           $stmt->execute(array(
             ':username' => $username,
             ':password' => $password,
+            ':level' => $level,
             ));
           header('Location: signup_form.php?action=joined');
           exit;
