@@ -32,7 +32,7 @@
     }
 ?>
 <html>
-<head><title>Register</title></head>
+<head><title>Sign Up</title></head>
 	<style>
 	html, body {
 		margin: 1px;
