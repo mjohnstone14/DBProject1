@@ -19,7 +19,7 @@
             ':username' => $username,
             ':password' => $password,
             ));
-          header('Location: register.php?action=joined');
+          header('Location: signup_form.php?action=joined');
           exit;
         }
         catch(PDOException $e) {
@@ -28,7 +28,7 @@
       }
     }
     if(isset($_GET['action']) && $_GET['action'] == 'joined') {
-      $errMsg = 'Registration successfull. Now you can <a href="login.php">login</a>';
+      $errMsg = 'Registration successful. Now you can <a href="login.php">login</a>';
     }
 ?>
 <html>
