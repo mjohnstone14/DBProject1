@@ -6,7 +6,7 @@
       // Get data from FROM
       $username = $_POST['username'];
       $password = $_POST['password'];
-      $level = 1;
+      $level = '1';
 
       if($username == '')
         $errMsg = 'Please enter username';
