@@ -1,7 +1,8 @@
 <?php
-     $db_file = '../myDB/user.db';
-     $db = new PDO('sqlite:' . $db_file);
     if(isset($_POST['register'])) {
+      $db_file = '../myDB/user.db';
+      $db = new PDO('sqlite:' . $db_file);
+      
       $errMsg = '';
       // Get data from FROM
       $username = $_POST['username'];
