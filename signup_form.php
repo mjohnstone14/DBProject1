@@ -6,6 +6,7 @@
       // Get data from FROM
       $username = $_POST['username'];
       $password = $_POST['password'];
+      $level = 1;
 
       if($username == '')
         $errMsg = 'Please enter username';
@@ -14,7 +15,7 @@
      
       if($errMsg == ''){
         try {
-          $stmt = $db->prepare('INSERT INTO pdo (username, password) VALUES (:username, :password)');
+          $stmt = $db->prepare('INSERT INTO pdo (username, password, level) VALUES (:username, :password, :level)');
           $stmt->execute(array(
             ':username' => $username,
             ':password' => $password,
