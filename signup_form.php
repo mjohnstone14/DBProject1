@@ -17,11 +17,15 @@
       if($errMsg == ''){
         try {
           $stmt = $db->prepare('INSERT INTO User (username, password, level) VALUES (:username, :password, :level)');
-          $stmt->execute(array(
-            ':username' => $username,
-            ':password' => $password,
-            ':level' => $level
-            ));
+          // $stmt->execute(array(
+          //   ':username' => $username,
+          //   ':password' => $password,
+          //   ':level' => $level
+          //   ));
+          $stmt->bindParam(':username', $username);
+          $stmt->bindParam(':password', $password);
+          $stmt->bindParam(':level', $level);
+          $db->execute();
           header('Location: signup_form.php?action=joined');
           exit;
         }
