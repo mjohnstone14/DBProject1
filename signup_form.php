@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['register'])) {
-      $db_file = '../myDB/user.db';
+      $db_file = '../myDB/spitting.db';
       $db = new PDO('sqlite:' . $db_file);
 
       $errMsg = '';

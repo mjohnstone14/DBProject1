@@ -1,6 +1,6 @@
 <?php
 	if(isset($_POST['login'])) {
-        $db_file = '../myDB/airport.db';
+        $db_file = '../myDB/spitting.db';
         $db = new PDO('sqlite:' . $db_file);
 
 		$errMsg = '';
@@ -13,7 +13,7 @@
 			$errMsg = 'Enter password';
 		if($errMsg == '') {
 			try {
-				$stmt = $db->prepare('SELECT id, fullname, username, password, level FROM user WHERE username = :username');
+				$stmt = $db->prepare('SELECT username, password, level FROM user WHERE username = :username');
 				$stmt->execute(array(
 					':username' => $username
 					));
