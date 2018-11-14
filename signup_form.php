@@ -7,6 +7,7 @@
       // Get data from FORM
       $username = $_POST['username'];
       $password = $_POST['password'];
+      $flag = '0';
       $level = '1';
 
       if($username == '')
@@ -16,7 +17,7 @@
      
       if($errMsg == ''){
         try {
-          $stmt = $db->prepare("INSERT INTO User (username, password, level) VALUES (:username, :password, :level)");
+          $stmt = $db->prepare("INSERT INTO User (username, password, flag, level) VALUES (:username, :password, :flag, :level)");
           // $stmt->execute(array(
           //   ':username' => $username,
           //   ':password' => $password,
@@ -24,6 +25,7 @@
           //   ));
           $stmt->bindParam(':username', $username);
           $stmt->bindParam(':password', $password);
+          $stmt->bindParam(':flag', $flag);
           $stmt->bindParam(':level', $level);
           $stmt->execute();
           header('Location: signup_form.php?action=joined');
