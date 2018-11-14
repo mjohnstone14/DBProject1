@@ -7,8 +7,8 @@
       // Get data from FORM
       $username = $_POST['username'];
       $password = $_POST['password'];
-      $flag = '0';
-      $level = '1';
+      $flag = 0;
+      $level = 1;
 
       if($username == '')
         $errMsg = 'Please enter username';
