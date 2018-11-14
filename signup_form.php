@@ -25,7 +25,7 @@
           $stmt->bindParam(':username', $username);
           $stmt->bindParam(':password', $password);
           $stmt->bindParam(':level', $level);
-          $db->execute();
+          $stmt->execute();
           header('Location: signup_form.php?action=joined');
           exit;
         }
