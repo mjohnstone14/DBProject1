@@ -44,13 +44,13 @@
 	</style>
 <body>
 	<div align="center">
-		<div style=" border: solid 1px #006D9C; " align="left">
+		<div style=" border: solid 1px #782121; " align="left">
 			<?php
 				if(isset($errMsg)){
 					echo '<div style="color:#FF0000;text-align:center;font-size:17px;">'.$errMsg.'</div>';
 				}
 			?>
-			<div style="background-color:#006D9C; color:#800000; padding:10px;"><b>Sign Up</b></div>
+			<div style="background-color:#782121; color:#ffffff; padding:10px;"><b>Sign Up</b></div>
 			<div style="margin: 15px">
 				<form action="" method="post">
 				  <input type="text" name="username" placeholder="Username" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>" autocomplete="off" class="box"/><br /><br />
