@@ -27,7 +27,7 @@
 						$_SESSION['username'] = $data['username'];
 						$_SESSION['password'] = $data['password'];
 						$_SESSION['level'] = $data['level'];
-						header('Location: dashboard.php');
+						header('Location: login_form.php');
 						exit;
 					}
 					else
