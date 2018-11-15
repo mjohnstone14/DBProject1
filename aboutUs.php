@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <form method="get" action="DBProject1/userHome.php">
+  <form method="get" action="userHome.php">
     <button type="submit">Home Page</button>
   </form>
   <!-- Site made with Mobirise Website Builder v4.8.7, https://mobirise.com -->
