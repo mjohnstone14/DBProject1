@@ -28,7 +28,7 @@
 						$_SESSION['password'] = $data['password'];
 						$_SESSION['flag'] = $data['flag'];
 						$_SESSION['level'] = $data['level'];
-						header('Location: login_form.php');
+						header('Location: userHome.php');
 						exit;
 					}
 					else
