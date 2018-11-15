@@ -34,12 +34,12 @@
 
         <div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face6.jpg">
+                    <img src="/Users/Ben/Documents/COMPSCI/455Project/github455/DBProject1/lib/images/harperShapiro.jpg">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
                         <p class="mbr-fonts-style display-5">
-                           John Smith
+                           Harper Shapiro
                         </p>
                     </div>
                     <div class="item-role px-2">
@@ -68,12 +68,12 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face6.jpg">
+                    <img src="/Users/Ben/Documents/COMPSCI/455Project/github455/DBProject1/lib/images/benShapiro.jpg">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
                         <p class="mbr-fonts-style display-5">
-                           John Smith
+                           Ben Shapiro
                         </p>
                     </div>
                     <div class="item-role px-2">
@@ -102,12 +102,12 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face6.jpg">
+                    <img src="/Users/Ben/Documents/COMPSCI/455Project/github455/DBProject1/lib/images/marwan.jpg">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
                         <p class="mbr-fonts-style display-5">
-                           John Smith
+                           Marwan
                         </p>
                     </div>
                     <div class="item-role px-2">
