@@ -17,7 +17,8 @@
      
       if($errMsg == ''){
         try {
-          $stmt = $db->prepare("INSERT INTO User (username, password, flag, level) VALUES (:username, :password, :flag, :level)");
+          //$stmt = $db->prepare("INSERT INTO User (username, password, flag, level) VALUES (:username, :password, :flag, :level)");
+          $stmt = $db->prepare("INSERT INTO User VALUES(:username, :password, :flag, :level)");
           // $stmt->execute(array(
           //   ':username' => $username,
           //   ':password' => $password,
