@@ -1,7 +1,8 @@
 <?php
     if(isset($_POST['register'])) {
-      $db_file = '../myDB/spitting.db';
-      $db = new PDO('sqlite:' . $db_file);
+ 
+      $db = new PDO('sqlite:../myDB/spitting.db');
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       $errMsg = '';
       // Get data from FORM
