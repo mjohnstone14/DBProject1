@@ -34,7 +34,7 @@
 
         <div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="harperShapiro.jpg">
+                    <img src="/Users/Ben/Documents/COMPSCI/455Project/github455/DBProject1/lib/images/harperShapiro.jpg">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -68,7 +68,7 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="benShapiro.jpg">
+                    <img src="/Users/Ben/Documents/COMPSCI/455Project/github455/DBProject1/lib/images/benShapiro.jpg">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -102,7 +102,7 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="marwan.jpg">
+                    <img src="/Users/Ben/Documents/COMPSCI/455Project/github455/DBProject1/lib/images/marwan.jpg">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
