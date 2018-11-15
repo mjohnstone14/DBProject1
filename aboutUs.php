@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html >
 <head>
+  <form method="get" action="DBProject1/userHome.php">
+    <button type="submit">Home Page</button>
+  </form>
   <!-- Site made with Mobirise Website Builder v4.8.7, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
