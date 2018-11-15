@@ -1,7 +1,7 @@
 <?php
 	if(isset($_POST['login'])) {
-        $db_file = '../myDB/spitting.db';
-        $db = new PDO('sqlite:' . $db_file);
+		$db = new PDO('sqlite:../myDB/spitting.db');
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$errMsg = '';
 		// Get data from FORM
@@ -13,7 +13,7 @@
 			$errMsg = 'Enter password';
 		if($errMsg == '') {
 			try {
-				$stmt = $db->prepare('SELECT username, password, level FROM User WHERE username = :username');
+				$stmt = $db->prepare('SELECT username, password, flag, level FROM User WHERE username = :username');
 				$stmt->execute(array(
 					':username' => $username
 					));
@@ -26,6 +26,7 @@
 						$_SESSION['name'] = $data['fullname'];
 						$_SESSION['username'] = $data['username'];
 						$_SESSION['password'] = $data['password'];
+						$_SESSION['flag'] = $data['flag'];
 						$_SESSION['level'] = $data['level'];
 						header('Location: login_form.php');
 						exit;

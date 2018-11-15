@@ -17,14 +17,8 @@
         $errMsg = 'Please enter password';
      
       if($errMsg == ''){
-        try {
-          //$stmt = $db->prepare("INSERT INTO User (username, password, flag, level) VALUES (:username, :password, :flag, :level)");
+        try {          
           $stmt = $db->prepare("INSERT INTO User VALUES(:username, :password, :flag, :level)");
-          // $stmt->execute(array(
-          //   ':username' => $username,
-          //   ':password' => $password,
-          //   ':level' => $level
-          //   ));
           $stmt->bindParam(':username', $username);
           $stmt->bindParam(':password', $password);
           $stmt->bindParam(':flag', $flag);
