@@ -4,7 +4,6 @@
   <form method="get" action="userHome.php">
     <button type="submit">Home Page</button>
   </form>
-  <!-- Site made with Mobirise Website Builder v4.8.7, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.8.7, mobirise.com">
