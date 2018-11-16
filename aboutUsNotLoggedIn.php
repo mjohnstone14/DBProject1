@@ -49,22 +49,22 @@
                         <p>Developer</p>
                     </div>
                     <div class="item-social pt-2">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.linkedin.com/in/mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.instagram.com/mobirise/" target="_blank">
+                        <a href="#" target="_blank">
 
                         </a>
-                        <a href="https://www.youtube.com/channel/UCt_tncVAetpK5JeM8L-8jyw" target="_blank">
+                        <a href="#" target="_blank">
 
                         </a>
                     </div>
@@ -83,22 +83,22 @@
                         <p>Developer</p>
                     </div>
                     <div class="item-social pt-2">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.linkedin.com/in/mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.instagram.com/mobirise/" target="_blank">
+                        <a href="#" target="_blank">
 
                         </a>
-                        <a href="https://www.youtube.com/channel/UCt_tncVAetpK5JeM8L-8jyw" target="_blank">
+                        <a href="#" target="_blank">
 
                         </a>
                     </div>
@@ -117,22 +117,22 @@
                         <p>Developer</p>
                     </div>
                     <div class="item-social pt-2">
-                        <a href="https://twitter.com/mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.linkedin.com/in/mobirise" target="_blank">
+                        <a href="#" target="_blank">
                             <span class="p-1 socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
                         </a>
-                        <a href="https://www.instagram.com/mobirise/" target="_blank">
+                        <a href="#" target="_blank">
 
                         </a>
-                        <a href="https://www.youtube.com/channel/UCt_tncVAetpK5JeM8L-8jyw" target="_blank">
+                        <a href="#" target="_blank">
 
                         </a>
                     </div>
