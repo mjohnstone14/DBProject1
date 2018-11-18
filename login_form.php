@@ -13,7 +13,7 @@
 			$errMsg = 'Enter password';
 		if($errMsg == '') {
 			try {
-				$stmt = $db->prepare('SELECT username, password, flag, level FROM User WHERE username = :username');
+				$stmt = $db->prepare('SELECT username, password, flag, email, level FROM User WHERE username = :username');
 				$stmt->execute(array(
 					':username' => $username
 					));
@@ -25,6 +25,7 @@
 					if($password == $data['password']) {
 						$_SESSION['name'] = $data['fullname'];
 						$_SESSION['username'] = $data['username'];
+						$_SESSION['email'] = $data['email'];
 						$_SESSION['password'] = $data['password'];
 						$_SESSION['flag'] = $data['flag'];
 						$_SESSION['level'] = $data['level'];

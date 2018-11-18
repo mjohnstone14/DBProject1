@@ -8,6 +8,7 @@
       // Get data from FORM
       $username = $_POST['username'];
       $password = $_POST['password'];
+      $email = $_POST['email'];
       $flag = 0;
       $level = 1;
 
@@ -18,9 +19,10 @@
      
       if($errMsg == ''){
         try {          
-          $stmt = $db->prepare("INSERT INTO User VALUES(:username, :password, :flag, :level)");
+          $stmt = $db->prepare("INSERT INTO User VALUES(:username, :password, :flag, :email, :level)");
           $stmt->bindParam(':username', $username);
           $stmt->bindParam(':password', $password);
+          $stmt->bindParam(':email', $email);
           $stmt->bindParam(':flag', $flag);
           $stmt->bindParam(':level', $level);
           $stmt->execute();
@@ -56,8 +58,9 @@
 			<div style="margin: 15px">
 				<form action="" method="post">
 				  <input type="text" name="username" placeholder="Username" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>" autocomplete="off" class="box"/><br /><br />
+					<input type="text" name="email" placeholder="Email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" class="box" /><br/><br />
 					<input type="password" name="password" placeholder="Password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>" class="box" /><br/><br />
-					<input type="submit" name='register' value="Register" class='submit'/><br />
+          <input type="submit" name='register' value="Register" class='submit'/><br />
 				</form>
 			</div>
 		</div>
