@@ -73,7 +73,7 @@ body, html {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="aboutUsNotLoggedIn.php" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="aboutUsNotLoggedIn.php" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
     <a href="signup_form.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Sign Up</a>
     <a href="login_form.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Log In</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
@@ -81,7 +81,7 @@ body, html {
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="bgimg-1 w3-display-container w3-opacity-60%" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">Spitting</span> Image</span>
   </div>
@@ -89,7 +89,7 @@ body, html {
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT Spitting Image</h3>
+  <h3 class="w3-center">About Spitting Image</h3>
   <p class="w3-center"><em>Cards At Your Fingertips </em></p>
   <p></p>
   <div class="w3-row">
