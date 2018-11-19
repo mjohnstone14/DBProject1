@@ -26,7 +26,7 @@ body, html {
 .bgimg-1 {
     background-image: url("http://www.besthdwallpaper.co/wp-content/uploads/2018/05/hd-3d-4k-wallpaper-57-images.jpg");
     max-height: 50%;
-    background-position: center;
+    background-size: contain;
 }
 
 /* Second image (Portfolio) */
