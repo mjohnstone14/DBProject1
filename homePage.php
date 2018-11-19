@@ -31,14 +31,14 @@ body, html {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("https://img.heypik.com/58pic/19/03/59/07z58PICumw_1024.jpg?x-oss-process=image/resize,w_264/sharpen,100/quality,q_80");
+    background-image: url("http://gracefulspoon.com/blog/wp-content/uploads/2008/03/architecture-portfolio.jpg");
     max-height: 400px;
     background-size: contain;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1Ee8HFRc-Q-cY61CchtGqVXLINjedi4JUqewkplT-wnigLh8Ag");
+    background-image: url("https://www.freeiconspng.com/uploads/--map-navigation-pin-store-locator-icon--icon-search-engine-17.png");
     max-height: 400px;
     background-size: contain;
 }
