@@ -115,7 +115,7 @@ body, html {
   </div>
 </div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">14+</span><br>
     Partners
@@ -132,7 +132,7 @@ body, html {
     <span class="w3-xlarge">150+</span><br>
     Meetings
   </div>
-</div>
+</div> -->
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
