@@ -139,8 +139,8 @@ body, html {
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-cell-top">
-    <span class="w3-xxlarge w3-text-dark-grey w3-large">PORTFOLIO</span>
+  <div class="w3-display-topmiddle">
+    <span class="w3-xxlarge w3-text-dark-grey w3-wide">PORTFOLIO</span>
   </div>
 </div>
 
