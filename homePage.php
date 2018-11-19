@@ -82,8 +82,8 @@ body, html {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-opacity-70%"><span class="w3-hide-small">Spitting</span> Image</span>
+  <div class="w3-display-middle" style="white-space:nowrap; opacity: 0.5;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-opacity"><span class="w3-hide-small">Spitting</span> Image</span>
   </div>
 </div>
 
