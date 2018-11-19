@@ -41,7 +41,7 @@
 	$font = './AlteHaasGroteskRegular.ttf';
 	$text_color = imagecolorallocate($template_merge, 255, 255, 255);
 	//$px = (imagesx($template_merge) - 7.5 * strlen($string)) / 2;
-	imagettftext($template_merge, $font_size, 0, $text_start_x, $text_start_y, $text_color, $font, $string);
+	//imagettftext($template_merge, $font_size, 0, $text_start_x, $text_start_y, $text_color, $font, $string);
 
 	//puts the final image in the newly created path
 	imagejpeg($template_merge,"$finalfile");
