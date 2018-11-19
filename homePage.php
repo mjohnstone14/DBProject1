@@ -24,19 +24,19 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
+    background-image: url("http://www.besthdwallpaper.co/wp-content/uploads/2018/05/hd-3d-4k-wallpaper-57-images.jpg");
     min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("/w3images/parallax2.jpg");
+    background-image: url("https://img.heypik.com/58pic/19/03/59/07z58PICumw_1024.jpg?x-oss-process=image/resize,w_264/sharpen,100/quality,q_80");
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("/w3images/parallax3.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1Ee8HFRc-Q-cY61CchtGqVXLINjedi4JUqewkplT-wnigLh8Ag");
     min-height: 400px;
 }
 
