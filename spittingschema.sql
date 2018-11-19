@@ -8,6 +8,7 @@ CREATE TABLE User(
     username TEXT PRIMARY KEY NOT NULL,
     password TEXT UNIQUE NOT NULL ,
     flag INT NOT NULL CHECK(flag=1 OR flag=0),
+    email TEXT NOT NULL UNIQUE,
     level INTEGER NOT NULL CHECK(level>0)    
 );
 

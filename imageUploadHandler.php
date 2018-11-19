@@ -16,19 +16,24 @@
     //resize uploaded image
     //width and height for cropped upload. should eventually
     //be same size as the white space on the template
-    $w = 500;
-    $h = 300;
+    $art_w = 604;
+    $art_h = 708;
+    $crop_x = 
+    $crop_y = 
 
-    $resized = imagecreatetruecolor($w,$h);
-    imagecopyresampled($resized,$im,0,0,0,0,$w,$h,$w,$h);
+    $resized = imagecreatetruecolor($art_w,$art_h);
+    imagecopyresampled($resized,$im,0,0,0,0,$art_w,$art_h,$art_w,$art_h);
 
     //merge image with template
     $template_w = 800;
     $template_h = 1100;
+    $art_x = 98;
+    $art_y = 143;
+
     //$template_merge = imagecreatetruecolor($template_w,$template_h);
     $template_merge = imagecreatefromjpeg('./lib/templates/spittingtemplate.jpeg');
     //did this part work?
-    imagecopymerge($template_merge,$resized,0,0,0,0,$w,$h,100);
+    imagecopymerge($template_merge,$resized,$art_x,$art_y,0,0,$art_w,$art_h,100);
 
 
 	//string properties
