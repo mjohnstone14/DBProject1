@@ -18,8 +18,8 @@
     //be same size as the white space on the template
     $art_w = 604;
     $art_h = 708;
-    $crop_x = 
-    $crop_y = 
+    //$crop_x = 
+    //$crop_y = 
 
     $resized = imagecreatetruecolor($art_w,$art_h);
     imagecopyresampled($resized,$im,0,0,0,0,$art_w,$art_h,$art_w,$art_h);
@@ -37,9 +37,11 @@
 
 
 	//string properties
-	$orange = imagecolorallocate($im, 220, 210, 60);
-	$px = (imagesx($im) - 7.5 * strlen($string)) / 2;
-	imagestring($im, 50, $px, 10, $string, $orange);
+	$font_size = 20; $text_start_x = 108; $text_start_y = 101;
+	$font = './AlteHaasGroteskRegular.ttf';
+	$text_color = imagecolorallocate($template_merge, 255, 255, 255);
+	//$px = (imagesx($template_merge) - 7.5 * strlen($string)) / 2;
+	imagettftext($template_merge, $font_size, 0, $text_start_x, $text_start_y, $text_color, $font, $string);
 
 	//puts the final image in the newly created path
 	imagejpeg($template_merge,"$finalfile");
@@ -48,7 +50,6 @@
 
 	//clean up
 	imagedestroy($template_merge);
-	imagedestroy($template);
 	imagedestroy($im);
 	imagedestroy($resized);
 	unlink($uploadfile);
