@@ -16,8 +16,8 @@ body, html {
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: center;
-    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -26,6 +26,7 @@ body, html {
 .bgimg-1 {
     background-image: url("http://www.besthdwallpaper.co/wp-content/uploads/2018/05/hd-3d-4k-wallpaper-57-images.jpg");
     max-height: 50%;
+    background-position: center;
 }
 
 /* Second image (Portfolio) */
