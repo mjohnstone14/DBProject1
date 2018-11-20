@@ -92,13 +92,13 @@ body, html {
   <h3 class="w3-center">About Spitting Image</h3>
   <p class="w3-center"><em>Cards At Your Fingertips </em></p>
   <p></p>
-  <div class="w3-row">
+  <!--<div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
       <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
     </div>
 
-    <!-- Hide this text on small devices -->
+
     <div class="w3-col m6 w3-hide-small w3-padding-large">
       <p>hello</p>
     </div>
@@ -115,7 +115,7 @@ body, html {
   <p class="w3-wide"><i class="fa fa-photo"></i>Coding</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-  </div>
+  </div>-->
 </div>
 
 <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
