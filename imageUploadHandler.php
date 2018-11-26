@@ -9,9 +9,11 @@
 	$im = imagecreatefromjpeg($uploadfile);
 
 	//variables for final edited image
-	$string = $_POST['text'];
+	$title = $_POST['title'];
+	$desc = $_POST['desc'];
 	$finaldir = "./lib/images/";
-	$finalfile = $finaldir.rand().".jpeg";
+	$time = time();
+	$finalfile = $finaldir.$time.".jpeg";
     
     //resize uploaded image
     //width and height for cropped upload. should eventually
@@ -30,28 +32,45 @@
     $art_x = 98;
     $art_y = 143;
 
-    //$template_merge = imagecreatetruecolor($template_w,$template_h);
     $template_merge = imagecreatefromjpeg('./lib/templates/spittingtemplate.jpeg');
-    //did this part work?
+    //doing the merge
     imagecopymerge($template_merge,$resized,$art_x,$art_y,0,0,$art_w,$art_h,100);
 
 
 	//string properties
-	$font_size = 20; $text_start_x = 108; $text_start_y = 101;
-	$font = './AlteHaasGroteskRegular.ttf';
-	$text_color = imagecolorallocate($template_merge, 255, 255, 255);
-	//$px = (imagesx($template_merge) - 7.5 * strlen($string)) / 2;
-	//imagettftext($template_merge, $font_size, 0, $text_start_x, $text_start_y, $text_color, $font, $string);
+	$font_size = 20; $title_start_x = 108; $title_start_y = 101;
+	$desc_start_x = 108; $desc_start_y = 950;
+	$font = 10;
+	$text_color = imagecolorallocate($template_merge, 0, 0, 0);
+    //UNTIL FREETYPE IS INSTALLED, FONT WILL BE DUMB.
+	//imagettftext($template_merge, $font_size, 0, $text_start_x, $text_start_y, $text_color, './arial.ttf', $string);
 
-	//puts the final image in the newly created path
+	//DRAW TITLE
+	imagestring($template_merge, $font, $title_start_x, $title_start_y, $title, $text_color);
+
+	//DRAW DESCRIPTION
+	imagestring($template_merge, $font, $desc_start_x, $desc_start_y, $desc, $text_color);
+
+
+	//DO THE INSERT INTO THE DATABASE
+	/*
+    $db = new PDO('sqlite:../myDB/spitting.db');
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $db->prepare("INSERT INTO Card (cardID,cardName,imagePath,creator) VALUES (:cardID,:cardName,:imagePath,:creator)");
+    $stmt->bindParam(':cardID', $time);
+   */
+
+
+
+	//PUTS the final image in the newly created path
 	imagejpeg($template_merge,"$finalfile");
 
 
 
-	//clean up
+	//CLEAN up
 	imagedestroy($template_merge);
 	imagedestroy($im);
 	imagedestroy($resized);
 	unlink($uploadfile);
-	header("Location: imageDisplay.php?path=$finalfile");
+    header("Location: imageDisplay.php?path=$finalfile");
 ?>
