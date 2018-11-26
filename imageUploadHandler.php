@@ -11,6 +11,7 @@
 	//variables for final edited image
 	$title = $_POST['title'];
 	$desc = $_POST['desc'];
+	$currUser = $_GET['user'];
 	$finaldir = "./lib/images/";
 	$time = time();
 	$finalfile = $finaldir.$time.".jpeg";
@@ -53,12 +54,16 @@
 
 
 	//DO THE INSERT INTO THE DATABASE
-	/*
+	
     $db = new PDO('sqlite:../myDB/spitting.db');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $db->prepare("INSERT INTO Card (cardID,cardName,imagePath,creator) VALUES (:cardID,:cardName,:imagePath,:creator)");
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $db->prepare("INSERT INTO Card (cardID,cardName,imagePath,creator) VALUES (:cardID,:cardName,:imagePath,:creator)");
     $stmt->bindParam(':cardID', $time);
-   */
+    $stmt->bindParam(':cardName', $title);
+    $stmt->bindParam(':imagePath', $finalfile);
+    $stmt->bindParam(':creator', $user);
+    $stmt->execute();
+   
 
 
 

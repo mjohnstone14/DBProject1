@@ -1,7 +1,7 @@
 <html>
 	<link rel ="stylesheet" type = "text/css" href="core.css">
 	<h1> CREATE YOUR CARD </h1>
-		<form action="imageUploadHandler.php" method="POST" enctype="multipart/form-data">
+		<form action="imageUploadHandler.php?user='user'" method="POST" enctype="multipart/form-data">
 
 			<p>Image File</p>
 			<input type="file" name="userfile" accept="image/*"></br>
@@ -11,6 +11,7 @@
 
 			<p>Card Description</p>
 			<input type="text" name="desc">
+
 			<input type="submit">
 		</form>
 <html>
