@@ -95,7 +95,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <img src="https://i.ebayimg.com/images/g/D5UAAOSw3RZaPx8Q/s-l300.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
           <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            <button class="w3-button w3-black">Trade Now <i class="fa fa-shopping-cart"></i></button>
           </div>
         </div>
         <p>card3<br><b>Username</b></p>
@@ -162,7 +162,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <img src="https://i.ebayimg.com/images/g/D5UAAOSw3RZaPx8Q/s-l300.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
           <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            <button class="w3-button w3-black">Trade Now <i class="fa fa-shopping-cart"></i></button>
           </div>
         </div>
         <p>card3<br><b>Username</b></p>
