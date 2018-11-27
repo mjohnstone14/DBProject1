@@ -23,7 +23,7 @@
 				}
 				else {
 					if($password == $data['password']) {
-						$_SESSION['name'] = $data['fullname'];
+						session_start();
 						$_SESSION['username'] = $data['username'];
 						$_SESSION['email'] = $data['email'];
 						$_SESSION['password'] = $data['password'];

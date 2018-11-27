@@ -20,7 +20,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>Spitting Image</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="imageUploader.html" class="w3-bar-item w3-button">Create Cards</a>
+    <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
     <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn"> -->
       <!-- Jeans <i class="fa fa-caret-down"></i> -->
@@ -296,6 +296,15 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+
+<?php
+  if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+    echo("Session wasn't started, now it is");
+  } else {
+    echo("Session started already");
+  }
+?>
 
 </body>
 </html>
