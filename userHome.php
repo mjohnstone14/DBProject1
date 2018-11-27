@@ -298,7 +298,9 @@ function w3_close() {
 </script>
 
 <?php
-  session_status();
+  session_start();
+  $_SESSION['username'] = $value;
+  echo $_SESSION['username'];
 ?>
 
 </body>
