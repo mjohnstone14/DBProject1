@@ -298,14 +298,8 @@ function w3_close() {
 </script>
 
 <?php
-  if(session_status() == PHP_SESSION_NONE) {
-    session_start();
-    echo("Session wasn't started, now it is");
-    header('Location: userHome.php');
-  } else {
-    echo("Session started already");
-    header('Location: userHome.php');
-  }
+  session_start();
+  print_r($_SESSION);
 ?>
 
 </body>
