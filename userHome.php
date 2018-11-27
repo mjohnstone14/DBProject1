@@ -301,8 +301,10 @@ function w3_close() {
   if(session_status() == PHP_SESSION_NONE) {
     session_start();
     echo("Session wasn't started, now it is");
+    header('Location: userHome.php');
   } else {
     echo("Session started already");
+    header('Location: userHome.php');
   }
 ?>
 
