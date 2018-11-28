@@ -90,8 +90,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
-    //echo "<img src = $path>";
-    echo $path;
+    echo "<img src = var_dump($path)>";
   }
   ?>
   <!-- Product grid -->
