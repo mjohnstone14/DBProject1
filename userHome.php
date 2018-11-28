@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head> 
+  <?php 
+  session_start();
+   ?> 
+</head>
 <title>Spitting Image</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -298,8 +303,7 @@ function w3_close() {
 </script>
 
 <?php
-  session_start();
-  echo $_SESSION['USER_DATA']['username'];
+  echo $_SESSION['username'];
 ?>
 
 </body>
