@@ -1,4 +1,5 @@
 <?php
+echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
     if(isset($_POST['register'])) {
  
       $db = new PDO('sqlite:../myDB/spitting.db');

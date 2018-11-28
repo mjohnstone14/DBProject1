@@ -1,4 +1,5 @@
 <?php
+echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 	if(isset($_POST['login'])) {
 		$db = new PDO('sqlite:../myDB/spitting.db');
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
