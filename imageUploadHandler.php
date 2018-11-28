@@ -1,3 +1,5 @@
+<head> <?php session_start(); ?>
+
 <?php
     
 	//uploading to the temp directory
@@ -11,7 +13,7 @@
 	//variables for final edited image
 	$title = $_POST['title'];
 	$desc = $_POST['desc'];
-	$currUser = $_GET['user'];
+	$currUser = $_SESSION['username'];
 	$finaldir = "./lib/images/";
 	$time = time();
 	$finalfile = $finaldir.$time.".jpeg";
@@ -61,7 +63,7 @@
     $stmt->bindParam(':cardID', $time);
     $stmt->bindParam(':cardName', $title);
     $stmt->bindParam(':imagePath', $finalfile);
-    $stmt->bindParam(':creator', $user);
+    $stmt->bindParam(':creator', $currUser);
     $stmt->execute();
    
 
