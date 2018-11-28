@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head> 
-  <?php 
+<head>
+  <?php
   session_start();
-   ?> 
+   ?>
 </head>
 <title>Spitting Image</title>
 <meta charset="UTF-8">
@@ -80,7 +80,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-container w3-text-grey" id="Other Users">
     <p>8 items</p>
   </div>
-
+  <?php
+  $stmt = $db->prepare('SELECT imagePath FROM Card');
+  $result = $stmt->execute();
+  $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach($result_set as $path) {
+    echo "<img src = '$path'>"
+  }
+  ?>
   <!-- Product grid -->
   <div class="w3-row w3">
     <div class="w3-col l3 s6">
