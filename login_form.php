@@ -29,7 +29,7 @@
 						$_SESSION['password'] = $data['password'];
 						$_SESSION['flag'] = $data['flag'];
 						$_SESSION['level'] = $data['level'];
-						//header('Location: userHome.php');
+						header('Location: userHome.php');
 
 						echo $_SESSION['username'];
 					
