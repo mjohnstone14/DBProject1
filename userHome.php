@@ -81,6 +81,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <p>8 items</p>
   </div>
   <?php
+  $db_file = '../myDB/spitting.db';
+  $db = new PDO('sqlite:' . $db_file);
+
+  //set errormode to use exceptions
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $stmt = $db->prepare('SELECT imagePath FROM Card');
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
