@@ -97,17 +97,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-row w3">
     <div class="w3-col l3 s6">
       <div class="w3-container">
-        <img src="https://i.pinimg.com/originals/6d/69/0f/6d690f08d223a4890553cd81b24a6e94.png" style="width:100%">
-        <p>Test Training Card<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIhH_vd1nz2o0D8WKfxNbPmPgLUfNOWpgJvK8IPk8J2QSv0_4u" style="width:100%">
-        <p>Card2<br><b>Username</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
         <div class="w3-display-container">
           <img src="https://i.ebayimg.com/images/g/D5UAAOSw3RZaPx8Q/s-l300.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
@@ -117,41 +106,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         </div>
         <p>card3<br><b>Username</b></p>
       </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXy4nHDvKbOM6uDn9gKQCv7f3ArGbr18XggoeJ_-A3vCGepP_CuA" style="width:100%">
-        <p>card4<br><b>Username</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="http://www.mypokecard.com/my/galery/nzgtVDJMbKip.jpg" style="width:100%">
-        <p>card5<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8IbZhwI2aidBP9hQPTcWdhMzDts8ROyrUOsHrWIvfNW6lMjfF" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Sale</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Card6<br><b class="w3-text-red">Username</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bS0lroLGriwDBNBfiNb7Z4sr5Pke7ncUa9C4zJXl6NZNdfmk" style="width:100%">
-        <p>Card7<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0EdtRgzU90tqBvGSbXHLuKPwDxybKDVg-hdDKM3XwGzGi737CHQ" style="width:100%">
-        <p>Card8<br><b>Username</b></p>
-      </div>
-    </div>
-  </div>
-
   <header class="w3-container w3-xlarge">
     <p class="w3-left">Your Deck</p>
   </header>
@@ -164,17 +118,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-row w3">
     <div class="w3-col l3 s6">
       <div class="w3-container">
-        <img src="https://i.pinimg.com/originals/6d/69/0f/6d690f08d223a4890553cd81b24a6e94.png" style="width:100%">
-        <p>Test Training Card<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIhH_vd1nz2o0D8WKfxNbPmPgLUfNOWpgJvK8IPk8J2QSv0_4u" style="width:100%">
-        <p>Card2<br><b>Username</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
         <div class="w3-display-container">
           <img src="https://i.ebayimg.com/images/g/D5UAAOSw3RZaPx8Q/s-l300.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
@@ -184,40 +127,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         </div>
         <p>card3<br><b>Username</b></p>
       </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXy4nHDvKbOM6uDn9gKQCv7f3ArGbr18XggoeJ_-A3vCGepP_CuA" style="width:100%">
-        <p>card4<br><b>Username</b></p>
-      </div>
-    </div>
 
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="http://www.mypokecard.com/my/galery/nzgtVDJMbKip.jpg" style="width:100%">
-        <p>card5<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8IbZhwI2aidBP9hQPTcWdhMzDts8ROyrUOsHrWIvfNW6lMjfF" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Sale</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Card6<br><b class="w3-text-red">Username</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bS0lroLGriwDBNBfiNb7Z4sr5Pke7ncUa9C4zJXl6NZNdfmk" style="width:100%">
-        <p>Card7<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0EdtRgzU90tqBvGSbXHLuKPwDxybKDVg-hdDKM3XwGzGi737CHQ" style="width:100%">
-        <p>Card8<br><b>Username</b></p>
-      </div>
-    </div>
-  </div>
 
   <!-- Subscribe section -->
   <div class="w3-container w3-black w3-padding-32">
