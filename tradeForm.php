@@ -30,8 +30,8 @@
      $result = $stmt->execute();
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set as $path) {
-         echo "<img src = $path[imagePath] height=20% width=20% >";
-         echo "<h2> Amount = $path[amount] </h2>";
+         echo "<img src = $path[imagePath] height=20% width=20% >
+               <p> Amount = $path[amount] <p>";
     }
     echo "</div>";
      
@@ -43,8 +43,8 @@
      $result = $stmt->execute();
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set as $path) {
-         echo "<img src = $path[imagePath] height=20% width=20% >";
-         echo "<h2> Amount = $path[amount] </h2>";
+         echo "<img src = $path[imagePath] height=20% width=20% >
+               <p> Amount = $path[amount] <p>";
     }
     echo "</div>";
 
