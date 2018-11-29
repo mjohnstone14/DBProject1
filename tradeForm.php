@@ -7,6 +7,8 @@
 
      $trade_user = $_POST['trade_user'];
      $initiator = $_SESSION['username'];
+     
+     echo "<h2> $initiator.'\'s cards </h2>";
 
 
      $db_file = '../myDB/spitting.db';
@@ -16,7 +18,7 @@
      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-     $stmt = $db->prepare('SELECT amount,imagePath FROM User NATURAL JOIN Owns NATURAL JOIN Card where username=:username');
+     $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
      $stmt->bindParam(':username',$initiator);
      $result = $stmt->execute();
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
