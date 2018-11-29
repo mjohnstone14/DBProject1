@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head> <?php session_start(); ?>  </head>
+  <link rel ="stylesheet" type = "text/css" href="templateCSS.css">
   <h1> Initiate Trade </h1>
   <body>
   <div class = "row">
