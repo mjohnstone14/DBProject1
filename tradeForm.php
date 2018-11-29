@@ -22,7 +22,7 @@
      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
      //print out initiator's cards
-     echo "<div class='column' width=50%>";
+     echo "<div class='column' style='width: 50%'>";
      echo "<h2> $initiator's cards </h2>";
 
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
@@ -36,14 +36,14 @@
     echo "</div>";
      
      //print out reciever
-     echo "<div class='column' width=50%>";
+     echo "<div class='column' style='width: 50%'>";
      echo "<h2> $reciever's cards </h2>";
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
      $stmt->bindParam(':username',$reciever);
      $result = $stmt->execute();
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set as $path) {
-         echo "<img src = $path[imagePath] height=20% width=20% >
+         echo "<img src = $path[imagePath] height=20% width=20%>
                <p> Amount = $path[amount] <p>";
     }
     echo "</div>";
