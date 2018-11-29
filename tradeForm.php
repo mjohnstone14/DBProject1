@@ -3,6 +3,7 @@
 <head> <?php session_start(); ?>  </head>
   <h1> Initiate Trade </h1>
   <body>
+  <div class = "row">
    <?php
 
      //$reciever = $_POST['trade_user'];
@@ -20,6 +21,7 @@
      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
      //print out initiator's cards
+     echo "<div class = 'colmun'>";
      echo "<h2> $initiator&#34;s cards </h2>";
 
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
@@ -28,10 +30,12 @@
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set as $path) {
          echo "<img src = $path[imagePath] height=20% width=20% >";
-         echo "<h2> Amount = $path[amount] </h2></br>";
+         echo "<h2> Amount = $path[amount] </h2>";
     }
+    echo "</div>";
      
      //print out reciever
+     echo "<div class = 'colmun'>";
      echo "<h2> $reciever&#34;s cards </h2>";
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
      $stmt->bindParam(':username',$reciever);
@@ -39,9 +43,11 @@
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set as $path) {
          echo "<img src = $path[imagePath] height=20% width=20% >";
-         echo "<h2> Amount = $path[amount] </h2></br>";
+         echo "<h2> Amount = $path[amount] </h2>";
     }
+    echo "</div>";
 
      ?>
+   </div>
   </body>
 </html>
