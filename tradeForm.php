@@ -34,7 +34,7 @@
      //print out reciever
      echo "<h2> $reciever&#34;s cards </h2>";
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
-     $stmt->bindParam(':username',$initiator);
+     $stmt->bindParam(':username',$reciever);
      $result = $stmt->execute();
      $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set as $path) {
