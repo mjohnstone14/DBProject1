@@ -626,3 +626,12 @@ figure.effect-bubba:hover p {
 @media screen and (max-width: 564px) {
 	.tm-banner-title { font-size: 2.8em; }
 }
+
+.row{
+ display: inline;
+ white-space: nowrap;
+}
+
+.column {
+  float: left;
+}

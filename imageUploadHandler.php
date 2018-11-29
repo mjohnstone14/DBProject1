@@ -21,8 +21,8 @@
     //resize uploaded image
     //width and height for cropped upload. should eventually
     //be same size as the white space on the template
-    $art_w = 604;
-    $art_h = 708;
+    $art_w = 453;
+    $art_h = 531;
     //$crop_x = 
     //$crop_y = 
 
@@ -30,10 +30,10 @@
     imagecopyresampled($resized,$im,0,0,0,0,$art_w,$art_h,$art_w,$art_h);
 
     //merge image with template
-    $template_w = 800;
-    $template_h = 1100;
-    $art_x = 98;
-    $art_y = 143;
+    $template_w = 600;
+    $template_h = 825;
+    $art_x = 73.5;
+    $art_y = 107.25;
 
     $template_merge = imagecreatefromjpeg('./lib/templates/spittingtemplate.jpeg');
     //doing the merge
@@ -41,18 +41,19 @@
 
 
 	//string properties
-	$font_size = 20; $title_start_x = 108; $title_start_y = 101;
-	$desc_start_x = 108; $desc_start_y = 950;
-	$font = 10;
+	$title_start_x = 81; $title_start_y = 45;
+	$desc_start_x = 81; $desc_start_y = 675;
+	$font1 = imageloadfont('./lib/card-fonts/Man+_I_12x24_LE.gdf');
+	$font2 = imageloadfont('./lib/card-fonts/Script_8x16_LE.gdf');
 	$text_color = imagecolorallocate($template_merge, 0, 0, 0);
     //UNTIL FREETYPE IS INSTALLED, FONT WILL BE DUMB.
 	//imagettftext($template_merge, $font_size, 0, $text_start_x, $text_start_y, $text_color, './arial.ttf', $string);
 
 	//DRAW TITLE
-	imagestring($template_merge, $font, $title_start_x, $title_start_y, $title, $text_color);
+	imagestring($template_merge, $font1, $title_start_x, $title_start_y, $title, $text_color);
 
 	//DRAW DESCRIPTION
-	imagestring($template_merge, $font, $desc_start_x, $desc_start_y, $desc, $text_color);
+	imagestring($template_merge, $font2, $desc_start_x, $desc_start_y, $desc, $text_color);
 
 
 	//DO THE INSERT INTO THE DATABASE
