@@ -21,8 +21,8 @@
      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
      //print out initiator's cards
-     echo "<div class = 'colmun'>";
-     echo "<h2> $initiator&#34;s cards </h2>";
+     echo "<div class='column' width=50%>";
+     echo "<h2> $initiator's cards </h2>";
 
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
      $stmt->bindParam(':username',$initiator);
@@ -35,8 +35,8 @@
     echo "</div>";
      
      //print out reciever
-     echo "<div class = 'colmun'>";
-     echo "<h2> $reciever&#34;s cards </h2>";
+     echo "<div class='column' width=50%>";
+     echo "<h2> $reciever's cards </h2>";
      $stmt = $db->prepare('SELECT amount,imagePath FROM Owns NATURAL JOIN Card where username=:username');
      $stmt->bindParam(':username',$reciever);
      $result = $stmt->execute();
