@@ -8,6 +8,8 @@
 	move_uploaded_file($_FILES['userfile']['tmp_name'],$uploadfile);
 
 	echo "creating image from " . "$uploadfile";
+	//upload and grab the dimensions
+	$dimensions = getimagesize($uploadfile);
 	$im = imagecreatefromjpeg($uploadfile);
 
 	//variables for final edited image
@@ -21,13 +23,13 @@
     //resize uploaded image
     //width and height for cropped upload. should eventually
     //be same size as the white space on the template
-    $art_w = 453;
-    $art_h = 531;
-    //$crop_x = 
-    //$crop_y = 
+    $art_w = 453; $art_h = 531;
+    $midX = ($dimensions[0])/2; $midY = ($dimensions[1])/2;
+    $crop_x = $midX-($art_w/2); $crop_y = $midY-($art_h/2);
+
 
     $resized = imagecreatetruecolor($art_w,$art_h);
-    imagecopyresampled($resized,$im,0,0,0,0,$art_w,$art_h,$art_w,$art_h);
+    imagecopyresampled($resized,$im,0,0,$crop_x,$crop_y,$art_w,$art_h,$art_w,$art_h);
 
     //merge image with template
     $template_w = 600;
@@ -66,6 +68,7 @@
     $stmt->bindParam(':imagePath', $finalfile);
     $stmt->bindParam(':creator', $currUser);
     $stmt->execute();
+    
    
 
 
