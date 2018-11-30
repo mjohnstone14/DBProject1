@@ -317,9 +317,7 @@ function w3_close() {
 }
 </script>
 
-<?php
-  echo $_SESSION['username'];
-?>
+
 
 </body>
 </html>
