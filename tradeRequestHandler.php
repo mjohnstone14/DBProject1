@@ -16,7 +16,7 @@ session_start();
     $stmt->bindParam(':cardID1', $card1);
     $stmt->bindParam(':cardID2', $card2);
     $stmt->execute();
-    header("tradeView.php");
+    header("Location: tradeView.php");
 
 
 
