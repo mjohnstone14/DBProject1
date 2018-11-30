@@ -52,7 +52,7 @@
       <input type="text" name="card1" value = "$result_set1[0]['cardID']"\>
       <input type="text" name="card2" value = "$result_set2[0]['cardID']"\>
 
-     </form>"
+     </form>";
 
      ?>
 
