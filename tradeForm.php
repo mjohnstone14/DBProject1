@@ -47,11 +47,11 @@
                <p> Amount = $path[amount] <p>";
     }
     echo "</div>";
-    echo     "<form action="tradeRequestHandler.php" method="POST">
-      <input type="hidden" name="reciever" value="marwan"\>
-      <input type="text" name="card1" value = "$result_set1[0]['cardID']"\>
-      <input type="text" name="card2" value = "$result_set2[0]['cardID']"\>
-
+    echo     "<form action='tradeRequestHandler.php' method='POST'>
+      <input type='hidden' name='reciever' value='marwan'\>
+      <input type='text' name='card1' value = "$result_set1[0]['cardID']"\>
+      <input type='text' name='card2' value = "$result_set2[0]['cardID']"\>
+      <input type='submit'>
      </form>";
 
      ?>
