@@ -12,7 +12,7 @@ session_start();
     $stmt = $db->prepare("INSERT INTO Trades (tradeID,initiator,receiver,cardID1,cardID2) VALUES (:tradeID,:initiator,:receiver,:cardID1,:cardID2)");
     $stmt->bindParam(':tradeID', $tradeID);
     $stmt->bindParam(':initiator', $initiator);
-    $stmt->bindParam(':receiever', $receiver);
+    $stmt->bindParam(':receiver', $receiver);
     $stmt->bindParam(':cardID1', $card1);
     $stmt->bindParam(':cardID2', $card2);
     $stmt->execute();
