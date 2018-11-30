@@ -51,7 +51,7 @@
     echo "</div>
     <div class='column' style='width: 50%'>
      <form action='tradeRequestHandler.php' method='POST'>
-      <input type='hidden' name='reciever' value='marwan'\>
+      <input type='hidden' name='receiver' value='marwan'\>
 
       <p>Card1 ID</p>
       <input type='text' name='card1'\>
