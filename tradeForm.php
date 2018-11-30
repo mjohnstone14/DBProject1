@@ -22,7 +22,7 @@
      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
      //print out initiator's cards
-     echo "<div class='column' style='width: 50%'>";
+     echo "<div class='column' style='width: 25%'>";
      echo "<h2> $initiator's cards </h2>";
 
      $stmt = $db->prepare('SELECT amount,imagePath,cardID FROM Owns NATURAL JOIN Card where username=:username');
@@ -37,7 +37,7 @@
     echo "</div>";
      
      //print out reciever
-     echo "<div class='column' style='width: 50%'>";
+     echo "<div class='column' style='width: 25%'>";
      echo "<h2> $reciever's cards </h2>";
      $stmt = $db->prepare('SELECT amount,imagePath,cardID FROM Owns NATURAL JOIN Card where username=:username');
      $stmt->bindParam(':username',$reciever);
@@ -48,8 +48,9 @@
                <p> Amount = $path[amount] <p>
                <p> ID = $path[cardID] <p>";
     }
-    echo "</div>";
-    echo     "<form action='tradeRequestHandler.php' method='POST'>
+    echo "</div>
+    <div class='column' style='width: 50%'>
+     <form action='tradeRequestHandler.php' method='POST'>
       <input type='hidden' name='reciever' value='marwan'\>
 
       <p>Card1 ID</p>
@@ -57,7 +58,8 @@
       <p>Card2 ID</p>
       <input type='text' name='card2'\>
       <input type='submit'>
-     </form>";
+     </form>
+     </div>";
 
      ?>
 
