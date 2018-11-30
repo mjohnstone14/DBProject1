@@ -6,7 +6,7 @@ session_start();
     $receiver = $_POST['receiver'];
     $card1 = $_POST['card1'];
     $card2 = $_POST['card2'];
-
+    
     $db = new PDO('sqlite:../myDB/spitting.db');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $db->prepare("INSERT INTO Trades (tradeID,initiator,receiver,cardID1,cardID2) VALUES (:tradeID,:initiator,:receiver,:cardID1,:cardID2)");
@@ -16,6 +16,7 @@ session_start();
     $stmt->bindParam(':cardID1', $card1);
     $stmt->bindParam(':cardID2', $card2);
     $stmt->execute();
+
     header("Location: tradeView.php");
 
 
