@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+<body>
 <h1> Build Your Deck </h1>
 <p> Select up to 10 cards to add to your deck. </p>
-
+<form action='buildDeckHandler.php'>
 <?php
   session_start();
   $creator = $_SESSION['username'];
@@ -16,11 +17,13 @@
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
-    echo "<form action='buildDeckHandler.php'>
-    <input type='checkbox' name=$path[cardID]>
+    echo "<input type='checkbox' name=$path[cardID]>
     <img src = $path[imagePath] height=30% width=30% >
-    </form>";
+    </input>
+    ";
   }
-  
 ?>
+  <input type="submit"\>
+  </form>
+</body>
 </html>
