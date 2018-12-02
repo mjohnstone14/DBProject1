@@ -1,18 +1,14 @@
 <?php
 echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
-	function random_str(
-		$length,
-		$keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-	) {
-		$str = '';
-		$max = mb_strlen($keyspace, '8bit') - 1;
-		if ($max < 1) {
-			throw new Exception('$keyspace must be at least two characters long');
+	function randomPassword() {
+		$alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+		$pass = array(); //remember to declare $pass as an array
+		$alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+		for ($i = 0; $i < 8; $i++) {
+			$n = rand(0, $alphaLength);
+			$pass[] = $alphabet[$n];
 		}
-		for ($i = 0; $i < $length; ++$i) {
-			$str .= $keyspace[random_int(0, $max)];
-		}
-		return $str;
+		return implode($pass); //turn the array into a string
 	}
 
 	if(isset($_POST['login'])) {
@@ -45,7 +41,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						
 
                         echo $_SESSION['username'];
-						$newPassword = random_str();
+						$newPassword = randomPassword();
 						echo $newPassword;
 					
 			

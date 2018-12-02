@@ -17,7 +17,7 @@
   	$cardID2 = $path['cardID2'];
 
     echo "<form method='POST' action='./tradeAcceptHandler.php'>";
-    echo "<h2> <b>$initiator</b> wants to trade $cardID1 to <b>$receiver<\b> for $cardID2.</h2>
+    echo "<h2> <b>$initiator</b> wants to trade $cardID1 to <b>$receiver</b> for $cardID2.</h2>
     ";
     echo "</form>";
   }
