@@ -113,6 +113,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <button type="button" class="w3-button w3-red w3-margin-bottom">Search</button>
   </div>
 
+  <div class="w3-container w3-text-grey" id="Other Users">
+    <p>8 items</p>
+  </div>
   <?php
   $db_file = '../myDB/spitting.db';
   $db = new PDO('sqlite:' . $db_file);
