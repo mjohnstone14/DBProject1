@@ -6,24 +6,21 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 
 		$errMsg = '';
 		// Get data from FORM
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		if($username == '')
-			$errMsg = 'Enter username';
-		if($password == '')
-			$errMsg = 'Enter password';
+		$email = $_POST['email'];
+		if($email == '')
+			$errMsg = 'Sorry, please enter a valid email';
 		if($errMsg == '') {
 			try {
-				$stmt = $db->prepare('SELECT username, password, flag, email, level FROM User WHERE username = :username');
+				$stmt = $db->prepare('SELECT * from User WHERE email = :email');
 				$stmt->execute(array(
-					':username' => $username
+					':email' => $email
 					));
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 				if($data == false){
-					$errMsg = "User $username not found.";
+					$errMsg = "Email $email not found.";
 				}
 				else {
-					if($password == $data['password']) {
+					if($email == $data['email']) {
 						session_start();
 						$_SESSION['username'] = $data['username'];
 						$_SESSION['email'] = $data['email'];
@@ -32,12 +29,11 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						$_SESSION['level'] = $data['level'];
 						header('Location: userHome.php');
 
-						echo $_SESSION['username'];
+                        echo $_SESSION['username'];
+                        echo $_SESSION['password'];
 					
 			
 					}
-					else
-						$errMsg = 'Password not match.';
 				}
 			}
 			catch(PDOException $e) {
@@ -66,13 +62,9 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 			<div style="background-color:#782121; color:#ffffff; padding:10px;"><b>Login</b></div>
 			<div style="margin: 15px">
 				<form action="" method="post">
-					<input type="text" name="username" placeholder= "Username" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>" autocomplete="off" class="box"/><br /><br />
-					<input type="password" name="password" placeholder= "Password " value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>" autocomplete="off" class="box" /><br/><br />
-					<input type="submit" name='login' value="Login" class='submit'/><br />
+					<input type="text" name="email" placeholder= "Email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br />
 				</form>
 			</div>
-			<div style="margin: 15px">
-				<a href="../resetPassword.php" class="button">Forgot password?</a>
 		</div>
 	</div>
 </body>
