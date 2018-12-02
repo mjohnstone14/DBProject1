@@ -27,6 +27,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
+    <a href ="tradeView.php" class ="w3-bar-item w3-button">All Current Trades</a>
     <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn"> -->
       <!-- Jeans <i class="fa fa-caret-down"></i> -->
     </a>
@@ -94,7 +95,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
     echo "<form method='get' action='./tradeForm.php'>";
-    echo "<img src = $path[imagePath] height=20% width=20%><div class='w3-display-middle w3-display-hover'><button class='w3-button w3-black'>Trade Now <i class='fa fa-shopping-cart'></i></button></div></img>";
+    echo "<img src = $path[imagePath] height=20% width=20%><div class='w3-display-middle w3-display-hover'><button class='w3-button w3-black'>Trade Now</button></div></img>";
     echo "</form>";
     echo "</div>";
     echo "</div>";
