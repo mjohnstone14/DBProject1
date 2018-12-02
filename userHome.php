@@ -78,7 +78,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <!-- </div> -->
   <!-- </div> -->
 
-  <div class="w3-container w3-text-grey" id="Other Users">
+  <div class="w3-container w3-text-black" id="Other Users">
     <p>8 items</p>
   </div>
   <?php
