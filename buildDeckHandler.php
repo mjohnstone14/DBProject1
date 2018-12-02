@@ -1,6 +1,9 @@
 <?php
 	session_start();
-	$creator = $_SESSION['username'];
+	$user = $_SESSION['username'];
+	//for now just insert 1 card each
+    $amount = 1;
+
     $db_file = '../myDB/spitting.db';
     $db = new PDO('sqlite:' . $db_file);
 
@@ -11,9 +14,14 @@
     //selected card into the owns table
     while(isset($_POST['card'.$num])){
     $cardID = $_POST['card'.$num];
-    $stmt = $db->prepare('INSERT into Owns (username,cardID,amount) values');
-
+    $stmt = $db->prepare('INSERT into Owns (username,cardID,amount) values :username, :cardID,:amount');
+    $stmt->bindParam(':username', $user);
+    $stmt->bindParam(':cardID', $cardID);
+    $stmt->bindParam(':amount', $amount);
+    $stmt->execute();
     }
+
+    header("Location: userHome.php");
 
 
 
