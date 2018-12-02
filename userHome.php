@@ -78,7 +78,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <!-- </div> -->
   <!-- </div> -->
 
-  <div class="w3-container w3-text-black" id="Other Users">
+  <div class="w3-container w3-text-grey" id="Other Users">
     <p>8 items</p>
   </div>
   <?php
@@ -120,6 +120,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <i class="fa fa-search"></i>
     </p>
   </header>
+  <div class="w3-container w3-black w3-padding-32">
   <div class="w3-container w3-text-grey" id="Other Users">
     <p>8 items</p>
   </div>
@@ -145,6 +146,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   }
   ?>
+  </div>
 
   <!-- Footer -->
   <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
