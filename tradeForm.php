@@ -4,6 +4,7 @@
   <link rel ="stylesheet" type = "text/css" href="templateCSS.css">
   <h1> Initiate Trade </h1>
   <body>
+  <body style="background-color:Dark-grey;">
   <div class = "row">
    <?php
 
@@ -12,9 +13,9 @@
      $reciever = 'marwan';
      $initiator = $_SESSION['username'];
 
-     
 
-     
+
+
      $db_file = '../myDB/spitting.db';
      $db = new PDO('sqlite:' . $db_file);
 
@@ -35,7 +36,7 @@
                <p> ID = $path[cardID] <p>";
     }
     echo "</div>";
-     
+
      //print out reciever
      echo "<div class='column' style='width: 25%'>";
      echo "<h2> $reciever's cards </h2>";
