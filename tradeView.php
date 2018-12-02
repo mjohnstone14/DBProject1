@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <?php
+
+  $db_file = '../myDB/spitting.db';
+  $db = new PDO('sqlite:' . $db_file);
+
+
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $stmt = $db->prepare('SELECT * FROM Trades');
   $result = $stmt->execute();
