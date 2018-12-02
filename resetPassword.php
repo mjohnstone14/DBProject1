@@ -63,6 +63,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 			<div style="margin: 15px">
 				<form action="" method="post">
 					<input type="text" name="email" placeholder= "Email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br />
+					<input type="submit" name='login' value="Login" class='submit'/><br />
 				</form>
 			</div>
 		</div>
