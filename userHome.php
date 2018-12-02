@@ -138,7 +138,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
     echo "<form method='get' action='./tradeForm.php'>";
-    echo "<img src = $path[imagePath] height=90% width=90%</img>";
+    echo "<img src = $path[imagePath] height=100% width=100%</img>";
     echo "</form>";
     echo "</div>";
     echo "</div>";
