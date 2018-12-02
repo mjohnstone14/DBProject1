@@ -15,7 +15,7 @@
     while(isset($_POST['card'.$num])){
     $cardID = $_POST['card'.$num];
     echo "cardID is now $cardID";
-    $stmt = $db->prepare('INSERT into Owns (username,cardID,amount) values :username, :cardID,:amount');
+    $stmt = $db->prepare("INSERT into Owns VALUES(:username,:cardID,:amount)");
     $stmt->bindParam(':username', $user);
     $stmt->bindParam(':cardID', $cardID);
     $stmt->bindParam(':amount', $amount);
