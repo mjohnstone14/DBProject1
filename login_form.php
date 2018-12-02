@@ -69,7 +69,8 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 					<input type="text" name="username" placeholder= "Username" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>" autocomplete="off" class="box"/><br /><br />
 					<input type="password" name="password" placeholder= "Password " value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>" autocomplete="off" class="box" /><br/><br />
 					<input type="submit" name='login' value="Login" class='submit'/><br />
-					<a href="../resetPassword.php" class="button">Forgot password?</a>
+					<br/>
+					<a href="./resetPassword.php" class="button">Forgot password?</a>
 				</form>
 			</div>
 		</div>
