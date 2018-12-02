@@ -22,7 +22,7 @@
     $stmt->execute();
     }
 
-    //header("Location: userHome.php");
+    header("Location: userHome.php");
 
 
 
