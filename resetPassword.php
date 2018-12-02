@@ -45,7 +45,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						
 
                         echo $_SESSION['username'];
-						$newPassword = ranom_str();
+						$newPassword = random_str();
 						echo $newPassword;
 					
 			
