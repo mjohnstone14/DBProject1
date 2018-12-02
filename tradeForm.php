@@ -4,7 +4,7 @@
   <link rel ="stylesheet" type = "text/css" href="templateCSS.css">
   <h1> Initiate Trade </h1>
   <body>
-  <body style="background-color:powderblue;">
+  <body style="background-color:Darkgrey;">
   <div class = "row">
    <?php
 
