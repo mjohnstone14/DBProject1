@@ -16,11 +16,13 @@
   $stmt->bindParam(':creator', $creator);
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $inc = 0;
   foreach($result_set as $path) {
-    echo "<input type='checkbox' name=$path[cardID]>
+    echo "<input type='checkbox' name='card'.$inc value=$path[cardID]>
     <img src = $path[imagePath] height=30% width=30% >
     </input>
     ";
+    $inc+=1;
   }
 ?>
   <input type="submit"\>
