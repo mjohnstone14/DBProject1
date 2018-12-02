@@ -113,6 +113,29 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <button type="button" class="w3-button w3-red w3-margin-bottom">Search</button>
   </div>
 
+  <?php
+  $db_file = '../myDB/spitting.db';
+  $db = new PDO('sqlite:' . $db_file);
+
+  //set errormode to use exceptions
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $stmt = $db->prepare('SELECT imagePath FROM Card');
+  $result = $stmt->execute();
+  $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach($result_set as $path) {
+    echo "<div class = 'w3-row-w3'>";
+    echo "<div class = 'w3-col l3 s6'>";
+    echo "<div class = 'w3-container'>";
+    echo "<form method='get' action='./tradeForm.php'>";
+    echo "<img src = $path[imagePath] height=90% width=90%</img>";
+    echo "</form>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+
+  }
+  ?>
+
   <!-- Footer -->
   <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
     <div class="w3-row-padding">
