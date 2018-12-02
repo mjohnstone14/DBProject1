@@ -23,7 +23,7 @@
   //loop through each image that the user has created,
   //give them a checkbox to select whether they want to add it to their deck or not.
   foreach($result_set as $path) {
-    echo "<input type='checkbox' name='card".$inc." value=$path[cardID]>
+    echo "<input type='checkbox' name='card".$inc."' value=$path[cardID]>
     <img src = $path[imagePath] height=30% width=30% >
     </input>
     ";
