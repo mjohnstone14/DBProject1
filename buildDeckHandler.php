@@ -24,7 +24,7 @@
     $num=0;
     //loop through all POST card variables to insert each 
     //selected card into the owns table
-    while($num<count;){
+    while($num<count){
     	if(isset($_POST['card'.$num])){
    		$cardID = $_POST['card'.$num];
     	echo "cardID is now $cardID";
