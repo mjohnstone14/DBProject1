@@ -3,6 +3,10 @@
   <?php
   session_start();
    ?>
+<head>
+  <form method="get" action="userHome.php">
+    <button type="submit">Home Page</button>
+  </form>
 </head>
 <title>Spitting Image</title>
 <meta charset="UTF-8">

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <form method="get" action="userHome.php">
+    <button type="submit">Home Page</button>
+  </form>
 </head>
 <title>All Trades</title>
 <meta charset="UTF-8">
