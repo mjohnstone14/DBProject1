@@ -27,6 +27,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
     <a href ="tradeView.php" class ="w3-bar-item w3-button">All Current Trades</a>
+    <a href ="viewAllCards.php" class ="w3-bar-item w3-button">View All Cards</a>
     <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn"> -->
       <!-- Jeans <i class="fa fa-caret-down"></i> -->
     </a>
