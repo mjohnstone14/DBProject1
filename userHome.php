@@ -87,7 +87,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   //set errormode to use exceptions
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $db->prepare('SELECT * from Owns NATURAL JOIN User group by username');
+  $stmt = $db->prepare('SELECT * from Owns NATURAL JOIN Card group by username');
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
@@ -95,6 +95,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
     echo "<form method='get' action='./tradeForm.php'>";
+    echo "<p> $path[username] </p>"
     echo "<img src = $path[imagePath] height=90% width=90%><button class='w3-button w3-black'>Trade Now</button></img>";
     echo "</form>";
     echo "</div>";

@@ -7,7 +7,7 @@
 
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $db->prepare('SELECT * FROM Trades NATURAL JOIN Card');
+  $stmt = $db->prepare('SELECT * FROM Trades NATURAL JOIN Card where (cardID1=cardID OR cardID2=cardID) ');
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
@@ -15,6 +15,8 @@
   	$receiver = $path['receiver'];
   	$cardID1 = $path['cardID1'];
   	$cardID2 = $path['cardID2'];
+
+  	
 
     echo "<form method='POST' action='./tradeAcceptHandler.php'>";
     echo "<h2> <b>$initiator</b> wants to trade $cardID1 to <b>$receiver</b> for $cardID2.</h2>
