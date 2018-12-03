@@ -82,7 +82,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <!-- </div> -->
   <!-- </div> -->
 
-   <div class="w3-container w3-text-grey" id="Other Users">
+   <div style="background-color:DarkGrey"class="w3-container w3-text-black" id="Other Users">
     <p>Recent items</p>
   </div>
   <?php
@@ -120,11 +120,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
   </form>
 
-  <header class="w3-container w3-xlarge">
+  <header style="background-color:DarkGrey" class="w3-container w3-xlarge">
     <p class="w3-left">Your Deck</p>
   </header>
   <div class="w3-container w3-black w3-padding-32">
-  <div class="w3-container w3-text-grey" id="Other Users">
+  <div style="background-color:DarkGrey"class="w3-container w3-text-black" id="Other Users">
     <p>Your items</p>
   </div>
   <?php
