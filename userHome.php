@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<style="background-color:lightgrey">
 <html>
   <?php
   session_start();
@@ -20,11 +19,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-  <div style="background-color:lightgrey"class="w3-container w3-display-container w3-padding-16">
+  <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 style="background-color:lightgrey"class="w3-wide"><b>Spitting Image</b></h3>
   </div>
-  <div style="background-color:lightgrey"class="w3-padding-64 w3-large w3-text-black" style="font-weight:bold">
+  <div class="w3-padding-64 w3-large w3-text-dark-grey" style="font-weight:bold">
     <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
     <a href ="tradeView.php" class ="w3-bar-item w3-button">All Current Trades</a>
@@ -53,7 +52,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
   <!-- Top header -->
-  <header style="background-color:lightgrey"class="w3-container w3-xlarge">
+  <header class="w3-container w3-xlarge w3-text-dark-grey">
     <p class="w3-left">Other Users</p>
     <p class="w3-right">
       <a class="btn btn-large btn-primary logout" href="buildDeck.php">
@@ -73,7 +72,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <!-- </div> -->
   <!-- </div> -->
 
-   <div style="background-color:lightgrey"class="w3-container w3-text-black" id="Other Users">
+   <div class="w3-container w3-text-dark-grey" id="Other Users">
     <p>Recent items</p>
   </div>
   <?php
@@ -216,4 +215,3 @@ function w3_close() {
 
 </body>
 </html>
-</style>
