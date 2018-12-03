@@ -7,8 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style background-color:DarkGrey>
-<body>
+<body style=background-color:DarkGrey>
 <h1> Build Your Deck </h1>
 <p> Select up to 10 cards to add to your deck. </p>
 <?php
