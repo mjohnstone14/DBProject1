@@ -56,7 +56,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						$sql = "UPDATE users SET password = $password WHERE email = $email";
 						$query = $db->prepare(sql);
 						$query->bindParam(':password', $password);
-						$query->bindParam(':email', $);
+						$query->bindParam(':email', $email);
 						$query->execute();
 					
 					}
