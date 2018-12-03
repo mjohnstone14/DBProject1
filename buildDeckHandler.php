@@ -18,7 +18,7 @@
     foreach($result_set as $count){
     	$created_amount = $count['count'];
     }
-    echo "count is $count";
+
 
     //set errormode to use exceptions
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -39,7 +39,7 @@
 
     }
 
-    //header("Location: userHome.php");
+    header("Location: userHome.php");
 
 
 
