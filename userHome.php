@@ -112,7 +112,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </form>
 
   <header class="w3-container w3-xlarge">
-    <p class="w3-left w3-dark-grey">Your Deck</p>
+    <p class="w3-left w3-text-dark-grey">Your Deck</p>
   </header>
   <div class="w3-container w3-text-dark-grey" id="Other Users">
     <p>Your items</p>
