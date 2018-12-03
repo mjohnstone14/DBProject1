@@ -65,7 +65,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <header class="w3-container w3-xlarge">
     <p class="w3-left">Other Users</p>
     <p class="w3-right">
-      <i class="fa fa-clone w3-margin-right" href="buildDeck.php"></i>
+      <a class="btn btn-large btn-primary logout" href="buildDeck.php">
+        <i class="fa fa-clone w3-margin-right" aria-hidden="true"></i>
+      </a>
       <i class="fa fa-search"></i>
     </p>
   </header>
