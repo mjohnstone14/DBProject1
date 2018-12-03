@@ -1,0 +1,26 @@
+  <div class="w3-container w3-text-grey" id="Other Users">
+    <p>8 items</p>
+  </div>
+  <?php
+  $db_file = '../myDB/spitting.db';
+  $db = new PDO('sqlite:' . $db_file);
+
+  //set errormode to use exceptions
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $stmt = $db->prepare('SELECT * from Owns NATURAL JOIN Card group by username');
+  $result = $stmt->execute();
+  $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach($result_set as $path) {
+    echo "<div class = 'w3-row-w3'>";
+    echo "<div class = 'w3-col l3 s6'>";
+    echo "<div class = 'w3-container'>";
+    echo "<form method='get' action='./tradeForm.php'>";
+    echo "<p> $path[username] </p>";
+    echo "<img src = $path[imagePath] height=90% width=90%><button class='w3-button w3-black'>Trade Now</button></img>";
+    echo "</form>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+
+  }
+  ?>

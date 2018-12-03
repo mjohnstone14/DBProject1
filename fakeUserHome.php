@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <?php
-  session_start();
-   ?>
-</head>
 <title>Spitting Image</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +22,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
-    <a href ="tradeView.php" class ="w3-bar-item w3-button">All Current Trades</a>
-    <a href ="viewAllCards.php" class ="w3-bar-item w3-button">View All Cards</a>
     <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn"> -->
       <!-- Jeans <i class="fa fa-caret-down"></i> -->
     </a>
@@ -38,6 +32,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <a href="#" class="w3-bar-item w3-button">Straight</a>
     </div> -->
     <a href="aboutUs.php" class="w3-bar-item w3-button">About</a>
+    <a href="myAccount.php" class="w3-bar-item w3-button">My Account</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
@@ -78,7 +73,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <!-- </div> -->
   <!-- </div> -->
 
-   <div class="w3-container w3-text-grey" id="Other Users">
+  <div class="w3-container w3-text-grey" id="Other Users">
     <p>8 items</p>
   </div>
   <?php
@@ -105,51 +100,81 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   }
   ?>
 
+  <!-- Product grid -->
+  <div class="w3-row w3">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="https://i.pinimg.com/originals/6d/69/0f/6d690f08d223a4890553cd81b24a6e94.png" style="width:100%">
+        <p>Test Training Card<br><b>Username</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIhH_vd1nz2o0D8WKfxNbPmPgLUfNOWpgJvK8IPk8J2QSv0_4u" style="width:100%">
+        <p>Card2<br><b>Username</b></p>
+      </div>
+    </div>
 
-  <!-- Subscribe section -->
-  <form action = './searchQuery.php' method = 'POST'>
-  <div class="w3-container w3-black w3-padding-32">
-    <h1>Search</h1>
-    <p>To find users by username!</p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Enter username" name = 'username' style="width:100%"></p>
-    <button type="submit" class="w3-button w3-red w3-margin-bottom">Search</button>
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="https://i.ebayimg.com/images/g/D5UAAOSw3RZaPx8Q/s-l300.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Trade Now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>card3<br><b>Username</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXy4nHDvKbOM6uDn9gKQCv7f3ArGbr18XggoeJ_-A3vCGepP_CuA" style="width:100%">
+        <p>card4<br><b>Username</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="http://www.mypokecard.com/my/galery/nzgtVDJMbKip.jpg" style="width:100%">
+        <p>card5<br><b>Username</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8IbZhwI2aidBP9hQPTcWdhMzDts8ROyrUOsHrWIvfNW6lMjfF" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Card6<br><b class="w3-text-red">Username</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bS0lroLGriwDBNBfiNb7Z4sr5Pke7ncUa9C4zJXl6NZNdfmk" style="width:100%">
+        <p>Card7<br><b>Username</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0EdtRgzU90tqBvGSbXHLuKPwDxybKDVg-hdDKM3XwGzGi737CHQ" style="width:100%">
+        <p>Card8<br><b>Username</b></p>
+      </div>
+    </div>
   </div>
-  </form>
 
   <header class="w3-container w3-xlarge">
     <p class="w3-left">Your Deck</p>
   </header>
-  <div class="w3-container w3-black w3-padding-32">
-  <div class="w3-container w3-text-grey" id="Other Users">
+
+  <div class="w3-container w3-text-grey" id="Your Deck">
     <p>8 items</p>
   </div>
-  <?php
-  //set up to display user's deck
-  $user = $_SESSION['username'];
-  $db_file = '../myDB/spitting.db';
-  $db = new PDO('sqlite:' . $db_file);
 
-  //set errormode to use exceptions
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  <!-- Product grid -->
 
-  //show each card in the user's deck
-  $stmt = $db->prepare('SELECT imagePath FROM Owns NATURAL JOIN Card where username=:username');
-  $stmt->bindParam(':username',$user);
-  $result = $stmt->execute();
-  $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  foreach($result_set as $path) {
-    echo "<div class = 'w3-row-w3'>";
-    echo "<div class = 'w3-col l3 s6'>";
-    echo "<div class = 'w3-container'>";
-    echo "<form method='get' action='./tradeForm.php'>";
-    echo "<img src = $path[imagePath] height=100% width=100%</img>";
-    echo "</form>";
-    echo "</div>";
-    echo "</div>";
-    echo "</div>";
-
-  }
-  ?>
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Search</h1>
+    <p>To find users by username!</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter username" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Search</button>
   </div>
 
   <!-- Footer -->
@@ -239,7 +264,10 @@ function w3_close() {
 }
 </script>
 
-
+<?php
+  session_start();
+  echo $_SESSION['USER_DATA']['username'];
+?>
 
 </body>
 </html>
