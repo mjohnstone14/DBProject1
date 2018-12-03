@@ -266,4 +266,8 @@ function toggleFunction() {
 </script>
 
 </body>
+
+<?php
+session_destroy();
+?>
 </html>
