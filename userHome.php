@@ -87,9 +87,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "<div class = 'w3-row-w3'>";
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
-    echo "<form method='get' action='./tradeForm.php'>";
+    echo "<form method='POST' action='./tradeForm.php'>";
     echo "<p style='color: white'> $path[username] </p>";
-    echo "<img src = $path[imagePath] height=90% width=90%><button class='w3-button w3-black'>Trade Now</button></img>";
+    echo "<img src = $path[imagePath] height=90% width=90%><input type='submit' name='receiver' value=$path[username] class='w3-button w3-black'>Trade Now</button></input></img>";
     echo "</form>";
     echo "</div>";
     echo "</div>";
