@@ -47,13 +47,14 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						// Mail them their key
 						$mailbody = "Dear user,\n\nIf this e-mail does not apply to you please ignore it. 
 						It appears that you have requested a password reset at our Spitting Images\n\n
-						To reset your password, please click the link and use the password provided.\n\n" . $password . " If you cannot click it, please paste it into your web browser's
+						To reset your password, please click the link and use the password provided.\n\n" . $password . "\n\n If you cannot click it, please paste it into your web browser's
 						 address bar.\n\n" . $pwrurl . "\n\nThanks,\nThe Administration";
+
 						mail($email, "Spitting Images - Password Reset", $mailbody);
 						echo "Your password recovery key has been sent to your e-mail address.";
 						
 					
-						$sql = 'UPDATE user SET password=? WHERE email=:email';
+						$sql = 'UPDATE user SET password= :password WHERE email= :email';
 						$query= $db->prepare($sql);
 						$query->execute();
 					
