@@ -171,20 +171,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
 
   <!-- Product grid -->
-  <?php
-  <div class="w3-row w3">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="https://i.pinimg.com/originals/6d/69/0f/6d690f08d223a4890553cd81b24a6e94.png" style="width:100%">
-        <p>Test Training Card<br><b>Username</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIhH_vd1nz2o0D8WKfxNbPmPgLUfNOWpgJvK8IPk8J2QSv0_4u" style="width:100%">
-        <p>Card2<br><b>Username</b></p>
-      </div>
-    </div>
-  </div>
-  ?>
+
   <!-- Subscribe section -->
   <div class="w3-container w3-black w3-padding-32">
     <h1>Search</h1>
