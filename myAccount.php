@@ -6,10 +6,10 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 
 		$errMsg = '';
 		// Get data from FORM
-        $email = $_POST['email'];
+        $email = $_POST['username'];
         $password = $_POST['password'];
 
-        $info = [':email' => $email, ':password' => $password];
+        $info = [':username' => username, ':password' => $password];
         $sql = 'UPDATE user SET password=:password WHERE email=:email';
         $query= $db->prepare($sql);
         $query->execute($info);
