@@ -116,7 +116,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <!-- Subscribe section -->
   <form action = './searchQuery.php' method = 'POST'>
   <div class="w3-container w3-black w3-padding-32">
-    <h5>Search</h5>
+    <h5 style="font-size:50px">Search</h5>
     <p>To find users by username!</p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter username" name = 'username' style="width:100%"></p>
     <button type="submit" class="w3-button w3-red w3-margin-bottom">Search</button>
