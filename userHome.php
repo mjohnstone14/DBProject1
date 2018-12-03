@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
 <style="background-color:lightgrey">
+<html>
   <?php
   session_start();
    ?>
@@ -215,5 +215,5 @@ function w3_close() {
 
 
 </body>
-</style>
 </html>
+</style>
