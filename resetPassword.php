@@ -54,9 +54,12 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						echo "Your password recovery key has been sent to your e-mail address.";
 						
 					
-						$sql = 'UPDATE user SET password= :password WHERE email= :email';
+						$sql = 'UPDATE user SET password=? WHERE email=?';
 						$query= $db->prepare($sql);
-						$query->execute();
+						$query->execute(array(
+							':email' => $email,
+							':password'=> $password
+							));
 					
 					}
 				}
