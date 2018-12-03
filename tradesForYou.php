@@ -47,7 +47,7 @@ foreach($result_set as $path) {
 
 }
 echo "<h1> Trades Proposed to You</h1>";
-$stmt = $db->prepare('SELECT * FROM (SELECT * from Trades where reciever = :username) NATURAL JOIN Card where cardID1 = cardID');
+$stmt = $db->prepare('SELECT * FROM (SELECT * from Trades where receiver = :username) NATURAL JOIN Card where cardID1 = cardID');
 $stmt->bindParam(':username',$username);
 $result = $stmt->execute();
 $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
