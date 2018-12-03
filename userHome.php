@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<style="background-color:lightgrey"</style>
   <?php
   session_start();
    ?>
@@ -31,19 +32,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href ="tradesForYou.php" class ="w3-bar-item w3-button">Trades For You</a>
     <a href ="myAccount.php" class ="w3-bar-item w3-button">Your Account</a>
     <a href ="tradeView.php" class ="w3-bar-item w3-button">View All Trades</a>
-    <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn"> -->
-      <!-- Jeans <i class="fa fa-caret-down"></i> -->
-    </a>
-    <!-- <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-      <a href="#" class="w3-bar-item w3-button">Relaxed</a>
-      <a href="#" class="w3-bar-item w3-button">Bootcut</a>
-      <a href="#" class="w3-bar-item w3-button">Straight</a>
-    </div> -->
     <a href="aboutUs.php" class="w3-bar-item w3-button">About</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
+
 </nav>
 
 <!-- Top menu on small screens -->
