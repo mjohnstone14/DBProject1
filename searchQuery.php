@@ -15,7 +15,7 @@ $username = $_POST['username'];
   foreach($result_set as $path) {
     $imagePath = $path['imagePath'];
     $cardName = $path['cardName'];
-    echo "echo "<img src = $path[imagePath] height=100% width=100%</img>";
+    "echo "<img src = $path[imagePath] height=100% width=100%</img>";
   }
   ?>
 
