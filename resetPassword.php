@@ -40,7 +40,6 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						$_SESSION['level'] = $data['level'];
 						
 
-                        $email = $_SESSION['email'];
 						$password = randomPassword();
 		
 						// Create a url which we will direct them to reset their password
