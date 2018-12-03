@@ -66,9 +66,6 @@ body, html {
     <a href="aboutUsNotLoggedIn.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> About</a>
     <a href="signup_form.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Sign Up</a>
     <a href="login_form.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Log In</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -76,7 +73,6 @@ body, html {
     <a href="aboutUsNotLoggedIn.php" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
     <a href="signup_form.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Sign Up</a>
     <a href="login_form.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Log In</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
