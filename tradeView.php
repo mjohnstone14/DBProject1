@@ -7,7 +7,7 @@
 
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $db->prepare('SELECT * FROM Trades');
+  $stmt = $db->prepare('SELECT * FROM Trades NATURAL JOIN Card');
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {

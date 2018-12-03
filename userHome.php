@@ -77,8 +77,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <!-- </div> -->
   <!-- </div> -->
 
-  <div class="w3-container w3-text-grey" id="Other Users">
-    <p>8 items</p>
+  <div class="w3-container w3-text-grey" id="Users">
+    <p>Trade with another user</p>
   </div>
   <?php
   $db_file = '../myDB/spitting.db';
@@ -86,7 +86,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   //set errormode to use exceptions
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $db->prepare('SELECT imagePath FROM Card');
+  $stmt = $db->prepare('SELECT * from Owns NATURAL JOIN User group by username');
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
