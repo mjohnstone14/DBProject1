@@ -41,10 +41,23 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						
 
                         echo $_SESSION['username'];
-						$newPassword = randomPassword();
-						echo $newPassword;
+						$password = randomPassword();
+		
+						// Create a url which we will direct them to reset their password
+						$pwrurl = "http://18.212.30.53/~ubuntu/DBProject1/login_form.php".$newPassword;
+						// Mail them their key
+						$mailbody = "Dear user,\n\nIf this e-mail does not apply to you please ignore it. 
+						It appears that you have requested a password reset at our Spitting Images\n\n
+						To reset your password, please click the link and use the password provided.\n\n" . $password . " If you cannot click it, please paste it into your web browser's
+						 address bar.\n\n" . $pwrurl . "\n\nThanks,\nThe Administration";
+						mail($_SESSION['email'], "Spitting Images - Password Reset", $mailbody);
+						echo "Your password recovery key has been sent to your e-mail address.";
+						
+						$sql = "UPDATE users SET password = $password WHERE email = $_SESSION['email']";
+						$query->bindParam(':password', $password);
+						$query->bindParam(':email', $_SESSION['email']);
+						$query->execute();
 					
-			
 					}
 				}
 			}
