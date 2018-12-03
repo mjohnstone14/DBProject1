@@ -68,6 +68,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <a class="btn btn-large btn-primary logout" href="buildDeck.php">
         <i class="fa fa-clone w3-margin-right" aria-hidden="true"></i>
       </a>
+      <a class="btn btn-large btn-primary logout" href="#h1">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </a>
       <i class="fa fa-search"></i>
     </p>
   </header>
