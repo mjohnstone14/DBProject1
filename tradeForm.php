@@ -40,7 +40,7 @@
      echo "<div class='column' style='width: 25%'>";
      echo "<h2> $receiver's cards </h2>";
      $stmt = $db->prepare('SELECT amount,imagePath,cardID FROM Owns NATURAL JOIN Card where username=:username');
-     $stmt->bindParam(':username',$reciever);
+     $stmt->bindParam(':username',$receiver);
      $result = $stmt->execute();
      $result_set2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach($result_set2 as $path) {
