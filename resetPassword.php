@@ -40,7 +40,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						$_SESSION['level'] = $data['level'];
 						
 
-                        echo $_SESSION['username'];
+                        $email = $_SESSION['email'];
 						$password = randomPassword();
 		
 						// Create a url which we will direct them to reset their password
@@ -53,9 +53,9 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						mail($_SESSION['email'], "Spitting Images - Password Reset", $mailbody);
 						echo "Your password recovery key has been sent to your e-mail address.";
 						
-						$sql = "UPDATE users SET password = $password WHERE email = $_SESSION['email']";
+						$sql = "UPDATE users SET password = $password WHERE email = $email";
 						$query->bindParam(':password', $password);
-						$query->bindParam(':email', $_SESSION['email']);
+						$query->bindParam(':email', $email);
 						$query->execute();
 					
 					}
