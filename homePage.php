@@ -268,6 +268,6 @@ function toggleFunction() {
 </body>
 
 <?php
-session_destroy();
+$_SESSION=array();
 ?>
 </html>
