@@ -23,7 +23,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 style="background-color:lightgrey"class="w3-wide"><b>Spitting Image</b></h3>
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  <div style="background-color:lightgrey"class="w3-padding-64 w3-large w3-text-black" style="font-weight:bold">
     <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
     <a href ="tradeView.php" class ="w3-bar-item w3-button">All Current Trades</a>
