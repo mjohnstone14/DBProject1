@@ -62,7 +62,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
   <!-- Top header -->
-  <header class="w3-container w3-xlarge">
+  <header class="w3-container w3-xlarge w3-DarkGrey">
     <p class="w3-left">Other Users</p>
     <p class="w3-right">
       <a class="btn btn-large btn-primary logout" href="buildDeck.php">
