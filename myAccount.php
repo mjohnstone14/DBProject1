@@ -10,7 +10,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
         $password = $_POST['password'];
 
         $info = [':username' => username, ':password' => $password];
-        $sql = 'UPDATE user SET password=:password WHERE email=:email';
+        $sql = 'UPDATE user SET password=:password WHERE username=:username';
         $query= $db->prepare($sql);
         $query->execute($info);
 
@@ -43,8 +43,8 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 			<div style="background-color:#782121; color:#ffffff; padding:10px;"><b>Login</b></div>
 			<div style="margin: 15px">
 				<form action="" method="post">
-                    <input type="text" name="email" placeholder= "Reset email?" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br />
-                    <input type="text" name="email" placeholder= "Reset password?" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>" autocomplete="off" class="box"/><br />
+                    <input type="text" name="email" placeholder= "Please enter your username" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br />
+                    <input type="text" name="email" placeholder= "Please enter your new password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>" autocomplete="off" class="box"/><br />
 					<input type="submit" name='reset' value="reset" class='submit'/><br />
 				</form>
 			</div>
