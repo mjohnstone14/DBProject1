@@ -54,7 +54,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						
 					
 						$sql = 'UPDATE user SET password=? WHERE email=:email';
-						$query= $dpo->prepare($sql);
+						$query= $db->prepare($sql);
 						$query->execute();
 					
 					}
