@@ -32,6 +32,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href ="myAccount.php" class ="w3-bar-item w3-button">Your Account</a>
     <a href="aboutUs.php" class="w3-bar-item w3-button">About</a>
     <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+    <a href="homePage.php" class="w3-bar-item w3-button w3-padding">Log Out</a>
   </div>
 </nav>
 
