@@ -9,7 +9,7 @@
 
      //$reciever = $_POST['trade_user'];
      //for now we pretend we are trading with marwan
-     $reciever = 'marwan';
+     $reciever = 'Marwan';
      $initiator = $_SESSION['username'];
 
 
