@@ -15,12 +15,17 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
         $query->execute($info);
 
         echo "Your information was updated successfully! $email with password: $password";
-           
+
     }
 ?>
 
 <html>
-<head><title>My Account</title></head>
+<head>
+	<title>My Account</title>
+	<form method="get" action="userHome.php">
+	<button type="submit">Home Page</button>
+	</form>
+</head>
 	<style>
 	html, body {
 		margin: 1px;
