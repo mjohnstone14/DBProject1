@@ -52,10 +52,9 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						mail($email, "Spitting Images - Password Reset", $mailbody);
 						echo "Your password recovery key has been sent to your e-mail address.";
 						
-						$sql = 'UPDATE user SET password = $password WHERE email = $email VALUES(:password, :email)';
-						$query = $db->prepare($sql);
-						$query->bindParam(':password', $password);
-						$query->bindParam(':email', $email);
+					
+						$sql = 'UPDATE user SET password=? WHERE email=:email';
+						$query= $dpo->prepare($sql);
 						$query->execute();
 					
 					}
