@@ -61,6 +61,7 @@ foreach($result_set as $path) {
   echo "</div>";
   echo "</div>";
   echo "</div>";
+}
 
 
 ?>
