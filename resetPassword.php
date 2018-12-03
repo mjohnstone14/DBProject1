@@ -44,7 +44,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						$password = randomPassword();
 		
 						// Create a url which we will direct them to reset their password
-						$pwrurl = "http://18.212.30.53/~ubuntu/DBProject1/login_form.php".$newPassword;
+						$pwrurl = "http://18.212.30.53/~ubuntu/DBProject1/login_form.php";
 						// Mail them their key
 						$mailbody = "Dear user,\n\nIf this e-mail does not apply to you please ignore it. 
 						It appears that you have requested a password reset at our Spitting Images\n\n
@@ -54,8 +54,9 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						echo "Your password recovery key has been sent to your e-mail address.";
 						
 						$sql = "UPDATE users SET password = $password WHERE email = $email";
+						$query = $db->prepare(sql);
 						$query->bindParam(':password', $password);
-						$query->bindParam(':email', $email);
+						$query->bindParam(':email', $);
 						$query->execute();
 					
 					}
