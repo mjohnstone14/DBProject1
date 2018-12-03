@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <form method="get" action="userHome.php">
+    <button type="submit">Home Page</button>
+  </form>
+
   <?php
   session_start();
   $username = $_SESSION['username'];
