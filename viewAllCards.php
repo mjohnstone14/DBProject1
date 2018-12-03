@@ -19,8 +19,8 @@
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-left">All Users Cards</p>
-  <div class="w3-container w3-black w3-padding-32">
   </header>
+  <div class="w3-container w3-black w3-padding-32">
   <div class="w3-container w3-text-grey" id="Other Users">
     <p>All items</p>
   </div>
