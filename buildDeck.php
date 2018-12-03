@@ -16,17 +16,20 @@
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  //start the form 
+  //start the form
   echo "<form action='buildDeckHandler.php' method='post'>";
   //an incrementer
   $inc = 0;
   //loop through each image that the user has created,
   //give them a checkbox to select whether they want to add it to their deck or not.
   foreach($result_set as $path) {
-    echo "<input type='checkbox' name='card".$inc."' value=$path[cardID]>
-    <img src = $path[imagePath] height=30% width=30% >
-    </input>
-    ";
+    echo "<div class = 'w3-row-w3'>";
+    echo "<div class = 'w3-col l3 s6'>";
+    echo "<div class = 'w3-container'>";
+    echo "<input type='checkbox' name='card".$inc."' value=$path[cardID]><img src = $path[imagePath] height=30% width=30% ></input>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
     $inc+=1;
   }
 ?>
