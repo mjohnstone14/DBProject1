@@ -49,7 +49,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 						It appears that you have requested a password reset at our Spitting Images\n\n
 						To reset your password, please click the link and use the password provided.\n\n" . $password . " If you cannot click it, please paste it into your web browser's
 						 address bar.\n\n" . $pwrurl . "\n\nThanks,\nThe Administration";
-						mail($_SESSION['email'], "Spitting Images - Password Reset", $mailbody);
+						mail($email, "Spitting Images - Password Reset", $mailbody);
 						echo "Your password recovery key has been sent to your e-mail address.";
 						
 						$sql = "UPDATE users SET password = $password WHERE email = $email";
