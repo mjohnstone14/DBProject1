@@ -97,7 +97,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "</div>";
 
   }
-  ?>
+
+ ?>
 
 
   <!-- Subscribe section -->
