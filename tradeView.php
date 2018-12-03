@@ -45,7 +45,7 @@
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
     echo "<h2> <b>$initiator</b> wants to trade $mainCardName to <b>$receiver</b>.</h2>";
-    echo "<img src=$imagePath height=50% width=50%/>"
+    echo "<img src=$imagePath height=50% width=50%/>";
     echo "</div>";
     echo "</div>";
     echo "</div>";
