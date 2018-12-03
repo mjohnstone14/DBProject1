@@ -11,7 +11,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 		return implode($pass); //turn the array into a string
 	}
 
-	if(isset($_POST['login'])) {
+	if(isset($_POST['reset'])) {
 		$db = new PDO('sqlite:../myDB/spitting.db');
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -90,7 +90,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 			<div style="margin: 15px">
 				<form action="" method="post">
 					<input type="text" name="email" placeholder= "Email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br />
-					<input type="submit" name='login' value="Login" class='submit'/><br />
+					<input type="submit" name='reset' value="reset" class='submit'/><br />
 				</form>
 			</div>
 		</div>
