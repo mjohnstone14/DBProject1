@@ -65,7 +65,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <header class="w3-container w3-xlarge">
     <p class="w3-left">Other Users</p>
     <p class="w3-right">
-      <i class="fa fa-clone w3-margin-right"</i>
+      <i class="fa fa-clone w3-margin-right"></i>
       <i class="fa fa-search"></i>
     </p>
   </header>
@@ -124,7 +124,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </header>
   <div class="w3-container w3-black w3-padding-32">
   <div class="w3-container w3-text-grey" id="Other Users">
-    <p>Your current items</p>
+    <p>Your items</p>
   </div>
   <?php
   //set up to display user's deck
