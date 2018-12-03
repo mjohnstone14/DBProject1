@@ -268,6 +268,16 @@ function toggleFunction() {
 </body>
 
 <?php
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["username"]) || $_SESSION["password"] == true){
+  unset($_SESSION['password']);
+  unset($_SESSION['username']);
+  session_destroy();
+  header('Location: login_form.php');
+  exit;
+}
+?>
+
 $_SESSION=array();
 ?>
 </html>
