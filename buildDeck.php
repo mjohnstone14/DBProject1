@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <form method="get" action="userHome.php">
+  <button type="submit">Home Page</button>
+  </form>
+</head>
 <title> Build Deck</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
