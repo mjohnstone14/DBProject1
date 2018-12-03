@@ -173,7 +173,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <div class="w3-col s4">
         <h4>About</h4>
         <p><a href="aboutUs.php">About us</a></p>
-        <p><a href="funnyPage.php">We're hiring</a></p>
+        <p><a href="funnyPage.html">We're hiring</a></p>
       </div>
 
       <div class="w3-col s4 w3-justify">
