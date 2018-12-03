@@ -120,12 +120,17 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <p>8 items</p>
   </div>
   <?php
+  //set up to display user's deck
+  $user = $_SESSION['username'];
   $db_file = '../myDB/spitting.db';
   $db = new PDO('sqlite:' . $db_file);
 
   //set errormode to use exceptions
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  //show each card in the user's deck
   $stmt = $db->prepare('SELECT imagePath FROM Owns NATURAL JOIN Card where username=:username');
+  $stmt->bindParam(':username',$user);
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
