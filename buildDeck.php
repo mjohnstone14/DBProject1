@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style background-color:DarkGrey>
 <body>
 <h1> Build Your Deck </h1>
 <p> Select up to 10 cards to add to your deck. </p>
@@ -34,7 +34,7 @@
     echo "<div class = 'w3-row-w3'>";
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
-    echo "<input type='checkbox' name='card".$inc."' value=$path[cardID]><img src = $path[imagePath] height=30% width=30% ></input>";
+    echo "<input type='checkbox' name='card".$inc."' value=$path[cardID]><img src = $path[imagePath] height=100% width=100% ></input>";
     echo "</div>";
     echo "</div>";
     echo "</div>";
