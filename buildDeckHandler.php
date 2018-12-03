@@ -16,7 +16,7 @@
     $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $created_amount = null;
     foreach($result_set as $count){
-    	$created_amount = $count['count'];
+    	$created_amount = $count[count];
     }
     echo "count is $count";
 
