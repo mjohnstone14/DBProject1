@@ -32,20 +32,20 @@
 
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $db->prepare('SELECT * FROM Trades NATURAL JOIN Card where (cardID1=cardID OR cardID2=cardID) ');
+  $stmt = $db->prepare('SELECT * from Trades INNER JOIN Card on (cardID1=cardID);');
   $result = $stmt->execute();
   $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($result_set as $path) {
   	$initiator = $path['initiator'];
   	$receiver = $path['receiver'];
   	$cardID1 = $path['cardID1'];
-  	$cardID2 = $path['cardID2'];
+    $mainCardName = $path['cardName'];
+    $imagePath = $path['imagePath'];
     echo "<div class = 'w3-row-w3'>";
     echo "<div class = 'w3-col l3 s6'>";
     echo "<div class = 'w3-container'>";
-    echo "<form method='POST' action='./tradeAcceptHandler.php'>";
-    echo "<h2> <b>$initiator</b> wants to trade $cardID1 to <b>$receiver</b> for $cardID2.</h2>";
-    echo "</form>";
+    echo "<h2> <b>$initiator</b> wants to trade $mainCardName to <b>$receiver</b>.</h2>";
+    echo "<img src=$imagePath height=50% width=50%/>"
     echo "</div>";
     echo "</div>";
     echo "</div>";
