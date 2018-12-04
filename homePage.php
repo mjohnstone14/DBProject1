@@ -266,7 +266,7 @@ function toggleFunction() {
 </script>
 
 <?php
-session_strat();
+session_start();
 //clear session from globals
 $_SESSION = array();
 //clear session from disk
