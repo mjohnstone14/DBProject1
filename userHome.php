@@ -211,9 +211,15 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-<?php
-echo $_SESSION['username'];
-?>
 
+<?php
+// check that the 'username' key exists
+if (isset($_SESSION['username'])) {
+ // it does; output the message
+  echo "You are not logged in!"
+  header("Location: login_form.php");
+  exit;
+}
+?>
 </body>
 </html>
