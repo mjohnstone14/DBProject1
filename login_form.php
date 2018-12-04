@@ -25,6 +25,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 				else {
 					if($password == $data['password']) {
 						session_start();
+						session_regenerate_id();
 						$_SESSION['username'] = $data['username'];
 						$_SESSION['email'] = $data['email'];
 						$_SESSION['password'] = $data['password'];
