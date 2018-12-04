@@ -71,7 +71,7 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
 ?>
 
 <html>
-<head><title>Login</title></head>
+<head><title>Reset Password</title></head>
 	<style>
 	html, body {
 		margin: 1px;
