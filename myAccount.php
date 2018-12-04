@@ -14,7 +14,10 @@ echo '<link rel ="stylesheet" type = "text/css" href="templateCSS.css">';
         $query= $db->prepare($sql);
         $query->execute($info);
 
-        echo "Your information was updated successfully! $email with password: $password";
+        echo "Your information was updated successfully!";
+
+        header("Location: login_form.php");
+        exit;
 
     }
 ?>
