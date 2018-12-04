@@ -216,7 +216,7 @@ function w3_close() {
 // check that the 'username' key exists
 if (isset($_SESSION['username'])) {
  // it does; output the message
-  echo "You are not logged in!"
+  echo "You are not logged in!";
   header("Location: login_form.php");
   exit;
 }
