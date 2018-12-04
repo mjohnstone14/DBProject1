@@ -1,3 +1,4 @@
+
 <?php// check that the 'username' key exists
   if (!isset($_SESSION['username'])) {
     // it does; output the message
@@ -5,13 +6,8 @@
     exit;
   }
 ?>
-
-
 <!DOCTYPE html>
 <html>
-  <?php
-  session_start();
-   ?>
 </head>
 <title>Spitting Image</title>
 <meta charset="UTF-8">
