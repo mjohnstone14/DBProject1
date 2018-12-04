@@ -119,30 +119,36 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-container w3-black w3-padding-32">
   <?php
   //set up to display user's deck
-  $user = $_SESSION['username'];
-  $db_file = '../myDB/spitting.db';
-  $db = new PDO('sqlite:' . $db_file);
-
-  //set errormode to use exceptions
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-  //show each card in the user's deck
-  $stmt = $db->prepare('SELECT imagePath FROM Owns NATURAL JOIN Card where username=:username');
-  $stmt->bindParam(':username',$user);
-  $result = $stmt->execute();
-  $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  foreach($result_set as $path) {
-    echo "<div class = 'w3-row-w3'>";
-    echo "<div class = 'w3-col l3 s6'>";
-    echo "<div class = 'w3-container'>";
-    echo "<form method='get' action='./tradeForm.php'>";
-    echo "<img src = $path[imagePath] height=100% width=100%</img>";
-    echo "</form>";
-    echo "</div>";
-    echo "</div>";
-    echo "</div>";
-
+  if(!isset($_SESSION['username'])) {
+    header('Location: login_form.php');
+    exit;
+  } else {
+    $user = $_SESSION['username'];
+    $db_file = '../myDB/spitting.db';
+    $db = new PDO('sqlite:' . $db_file);
+  
+    //set errormode to use exceptions
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
+    //show each card in the user's deck
+    $stmt = $db->prepare('SELECT imagePath FROM Owns NATURAL JOIN Card where username=:username');
+    $stmt->bindParam(':username',$user);
+    $result = $stmt->execute();
+    $result_set = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach($result_set as $path) {
+      echo "<div class = 'w3-row-w3'>";
+      echo "<div class = 'w3-col l3 s6'>";
+      echo "<div class = 'w3-container'>";
+      echo "<form method='get' action='./tradeForm.php'>";
+      echo "<img src = $path[imagePath] height=100% width=100%</img>";
+      echo "</form>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+  
+    }
   }
+
   ?>
   </div>
 
