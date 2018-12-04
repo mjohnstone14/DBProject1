@@ -274,6 +274,8 @@ $_SESSION = array();
 //clear session from disk
 session_destroy();
 
+echo $_SESSION['username'];
+
 ?>
 
 </body>
