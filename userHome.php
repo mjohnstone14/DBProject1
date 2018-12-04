@@ -119,6 +119,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
   <div class="w3-container w3-black w3-padding-32">
   <?php
+
+    // check that the 'username' key exists
+  if (!isset($_SESSION['username'])) {
+    // it does; output the message
+    echo "You are not logged in!";
+    header("Location: login_form.php");
+    exit;
+  }
   //set up to display user's deck
   $user = $_SESSION['username'];
   $db_file = '../myDB/spitting.db';
@@ -212,14 +220,5 @@ function w3_close() {
 }
 </script>
 
-<?php
-// check that the 'username' key exists
-if (!isset($_SESSION['username'])) {
- // it does; output the message
-  echo "You are not logged in!";
-  header("Location: login_form.php");
-  exit;
-}
-?>
 </body>
 </html>
