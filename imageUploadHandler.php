@@ -13,16 +13,33 @@
 	echo "creating image from " . "$uploadfile";
 	//upload and grab the dimensions
 	$dimensions = getimagesize($uploadfile);
+	/**
 	if(!($im = imagecreatefromjpeg($uploadfile))){
        if(!($im = imagecreatefrompng($uploadfile))){
        	  if(!($im = imagecreatefromgif($uploadfile))){
-       	  unlink($uploadfile);
        	  header("Location: imageUploader.php?error=true");
        	  exit;
        	  }
        }
 	};
+	**/
 
+	try{
+		$im = imagecreatefromjpeg($uploadfile);
+	} catch (Exception $e){
+		try{
+			$im = imagecreatefrompng($uploadfile);
+		} catch (Exception $e){
+			try{
+				$im = imagecreatefromgif($uploadfile);
+			} catch (Exception $e){
+			   unlink($uploadfile);
+               header("Location: imageUploader.php?error=true");
+               exit;
+			}
+		}
+	}
+	
 
 	//variables for final edited image
 	$currUser = $_SESSION['username'];
@@ -79,7 +96,7 @@
     $stmt->bindParam(':imagePath', $finalfile);
     $stmt->bindParam(':creator', $currUser);
     $stmt->execute();
-    
+   
     
    
 
