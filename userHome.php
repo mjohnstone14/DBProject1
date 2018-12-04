@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-<?php// check that the 'username' key exists
+  <?php
   session_start();
-?>
+   ?>
 </head>
 <title>Spitting Image</title>
 <meta charset="UTF-8">
@@ -98,8 +97,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "</div>";
 
   }
-
- ?>
+  ?>
 
 
   <!-- Subscribe section -->
@@ -212,6 +210,8 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+
+
 
 </body>
 </html>
