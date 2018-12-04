@@ -1,6 +1,23 @@
 <head> <?php session_start(); ?> </head>
 
 <?php	
+    
+    set_error_handler('myErrorHandler');
+	register_shutdown_function('fatalErrorShutdownHandler');
+	function myErrorHandler($code, $message, $file, $line) {
+  			   unlink($uploadfile);
+               header("Location: imageUploader.php?error=true");
+               exit;
+	}
+	function fatalErrorShutdownHandler()
+	{
+  		$last_error = error_get_last();
+  		if ($last_error['type'] === E_ERROR) {
+    // fatal error
+    	myErrorHandler(E_ERROR, $last_error['message'], $last_error['file'], $last_error['line']);
+  		}
+	}
+
     //saving the user's data
     $_SESSION['title'] = $_POST['title'];
 	$_SESSION['desc'] = $_POST['desc'];
@@ -13,17 +30,12 @@
 	echo "creating image from " . "$uploadfile";
 	//upload and grab the dimensions
 	$dimensions = getimagesize($uploadfile);
-	/**
-	if(!($im = imagecreatefromjpeg($uploadfile))){
-       if(!($im = imagecreatefrompng($uploadfile))){
-       	  if(!($im = imagecreatefromgif($uploadfile))){
-       	  header("Location: imageUploader.php?error=true");
-       	  exit;
-       	  }
-       }
-	};
-	**/
+	$im = imagecreatefromjpeg($uploadfile);
+	
 
+	
+    
+    /**
 	try{
 		$im = imagecreatefromjpeg($uploadfile);
 	} catch (Exception $e){
@@ -39,6 +51,7 @@
 			}
 		}
 	}
+	**/
 	
 
 	//variables for final edited image
