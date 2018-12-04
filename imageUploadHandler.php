@@ -16,6 +16,7 @@
 	if(!($im = imagecreatefromjpeg($uploadfile))){
        if(!($im = imagecreatefrompng($uploadfile))){
        	  if(!($im = imagecreatefromgif($uploadfile))){
+       	  unlink($uploadfile);
        	  header("Location: imageUploader.php?error=true");
        	  exit;
        	  }
