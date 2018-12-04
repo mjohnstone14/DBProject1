@@ -76,6 +76,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <p>Recent items</p>
   </div>
   <?php
+  
+  if(!isset($_SESSION['username'])) {
+    header('Location: login_form.php');
+    exit;
+  } 
+
   $db_file = '../myDB/spitting.db';
   $db = new PDO('sqlite:' . $db_file);
 
@@ -118,11 +124,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
   <div class="w3-container w3-black w3-padding-32">
   <?php
-  //set up to display user's deck
-  if(!isset($_SESSION['username'])) {
-    header('Location: login_form.php');
-    exit;
-  } else {
+
     $user = $_SESSION['username'];
     $db_file = '../myDB/spitting.db';
     $db = new PDO('sqlite:' . $db_file);
@@ -146,7 +148,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       echo "</div>";
       echo "</div>";
   
-    }
+    
   }
 
   ?>
