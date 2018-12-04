@@ -1,5 +1,6 @@
 
 <?php// check that the 'username' key exists
+  session_start();
   if (!isset($_SESSION['username'])) {
     // it does; output the message
     header("Location: login_form.php");
