@@ -24,7 +24,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>Spitting Image</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-dark-grey" style="font-weight:bold">
-    <a href="imageUploader.html?" class="w3-bar-item w3-button">Create Cards</a>
+    <a href="imageUploader.php?" class="w3-bar-item w3-button">Create Cards</a>
     <a href="buildDeck.php" class="w3-bar-item w3-button">Build Deck</a>
     <a href ="tradeView.php" class ="w3-bar-item w3-button">All Current Trades</a>
     <a href ="viewAllCards.php" class ="w3-bar-item w3-button">View All Cards</a>

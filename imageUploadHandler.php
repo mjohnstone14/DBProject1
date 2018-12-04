@@ -1,7 +1,10 @@
 <head> <?php session_start(); ?> </head>
 
-<?php
-    
+<?php	
+    //saving the user's data
+    $_SESSION['title'] = $_POST['title'];
+	$_SESSION['desc'] = $_POST['desc'];
+
 	//uploading to the temp directory
 	$uploaddir = './lib/temp/';
 	$uploadfile = $uploaddir.basename($_FILES['userfile']['name']);
@@ -10,11 +13,17 @@
 	echo "creating image from " . "$uploadfile";
 	//upload and grab the dimensions
 	$dimensions = getimagesize($uploadfile);
-	$im = imagecreatefromjpeg($uploadfile);
+	if(!($im = imagecreatefromjpeg($uploadfile))){
+       if(!($im = imagecreatefrompng($uploadfile))){
+       	  if(!($im = imagecreatefromgif($uploadfile))){
+       	  header("Location: imageUploader.php?error=true");
+       	  exit;
+       	  }
+       }
+	};
+
 
 	//variables for final edited image
-	$title = $_POST['title'];
-	$desc = $_POST['desc'];
 	$currUser = $_SESSION['username'];
 	$finaldir = "./lib/images/";
 	$time = time();
@@ -60,6 +69,7 @@
 
 	//DO THE INSERT INTO THE DATABASE
 	
+	
     $db = new PDO('sqlite:../myDB/spitting.db');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $db->prepare("INSERT INTO Card (cardID,cardName,imagePath,creator) VALUES (:cardID,:cardName,:imagePath,:creator)");
@@ -68,6 +78,7 @@
     $stmt->bindParam(':imagePath', $finalfile);
     $stmt->bindParam(':creator', $currUser);
     $stmt->execute();
+    
     
    
 
