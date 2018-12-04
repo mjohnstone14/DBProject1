@@ -211,8 +211,9 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
-
+<?php
+echo $_SESSION['username'];
+?>
 
 </body>
 </html>
