@@ -142,7 +142,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       echo "<div class = 'w3-col l3 s6'>";
       echo "<div class = 'w3-container'>";
       echo "<form method='get' action='./imageDisplay.php'>";
-      echo "<button type='submit' value=$path[imagePath]>";
+      echo "<button type='submit' name='path' value=$path[imagePath]>";
       echo "<img src = $path[imagePath] height=100% width=100%</img>";
       echo "</button>";
       echo "</form>";
