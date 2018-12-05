@@ -2,9 +2,13 @@
 <link rel ="stylesheet" type = "text/css" href="templateCSS.css">
 <body style="margin-left: 5%" >
 <div class="row">
- <div class="column" style="width: 40%">
+  <?php
+  if(isset($_GET['create'])){
+  echo "<div class='column' style='width: 40%'>
   <h1> Your card has been created.</h1> <h1>Click it to return home. </h1></br>
- </div>
+ </div>";
+ }
+ ?>
 
  <div class="column" style="width: 40%">
   <form action="userHome.php">

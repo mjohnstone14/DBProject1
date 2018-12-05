@@ -129,5 +129,5 @@
 	imagedestroy($im);
 	imagedestroy($resized);
 	unlink($uploadfile);
-    header("Location: imageDisplay.php?path=$finalfile");
+    header("Location: imageDisplay.php?path=$finalfile&&create=true");
 ?>
