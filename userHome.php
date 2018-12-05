@@ -96,7 +96,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     echo "<div class = 'w3-container'>";
     //echo "<form method='POST' action='./tradeForm.php'>";
     echo "<p style='color: white'> $path[username] </p>";
-    echo "<img src = $path[imagePath] height=90% width=90%><button type='submit' formmethod='POST' formaction='./tradeForm.php' name='receiver' value=$path[username] class='w3-button w3-black'>Trade Now</button></img>";
+    echo "<img src = $path[imagePath] height=90% width=90%/><button type='submit' formmethod='POST' formaction='./tradeForm.php' name='receiver' value=$path[username] class='w3-button w3-black'>Trade Now</button>";
     //echo "</form>";
     echo "</div>";
     echo "</div>";
