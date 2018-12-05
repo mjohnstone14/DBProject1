@@ -20,8 +20,8 @@
     }
 
 
-    //set errormode to use exceptions
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //set errormode to not break please
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
     $num=0;
     //loop through all POST card variables to insert each 
     //selected card into the owns table
