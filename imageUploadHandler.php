@@ -22,6 +22,9 @@
     //$_SESSION['title'] = $_POST['title'];
 	//$_SESSION['desc'] = $_POST['desc'];
 
+	$title = $_POST['title'];
+	$desc = $_POST['desc'];
+
 	//uploading to the temp directory
 	$uploaddir = './lib/temp/';
 	$uploadfile = $uploaddir.basename($_FILES['userfile']['name']);
