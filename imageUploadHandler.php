@@ -105,7 +105,8 @@
 	
 	
     $db = new PDO('sqlite:../myDB/spitting.db');
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //silent because i don;t want it to break ):
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
     $stmt = $db->prepare("INSERT INTO Card (cardID,cardName,imagePath,creator) VALUES (:cardID,:cardName,:imagePath,:creator)");
     $stmt->bindParam(':cardID', $time);
     $stmt->bindParam(':cardName', $title);
