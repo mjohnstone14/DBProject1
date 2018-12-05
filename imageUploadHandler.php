@@ -19,8 +19,8 @@
 	}*/
 
     //saving the user's data
-    $_SESSION['title'] = $_POST['title'];
-	$_SESSION['desc'] = $_POST['desc'];
+    //$_SESSION['title'] = $_POST['title'];
+	//$_SESSION['desc'] = $_POST['desc'];
 
 	//uploading to the temp directory
 	$uploaddir = './lib/temp/';
