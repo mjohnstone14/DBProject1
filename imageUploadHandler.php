@@ -1,7 +1,7 @@
 <head> <?php session_start(); ?> </head>
 
 <?php	
-    
+    /*
     set_error_handler('myErrorHandler');
 	register_shutdown_function('fatalErrorShutdownHandler');
 	function myErrorHandler($code, $message, $file, $line) {
@@ -16,7 +16,7 @@
     // fatal error
     	myErrorHandler(E_ERROR, $last_error['message'], $last_error['file'], $last_error['line']);
   		}
-	}
+	}*/
 
     //saving the user's data
     $_SESSION['title'] = $_POST['title'];
