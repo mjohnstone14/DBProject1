@@ -32,10 +32,10 @@
 			<input type="file" name="userfile" accept="image/*"></br>
 
 			<p>Card Title</p>
-			<input type="text" name="title" value=<?php echo "$title" ?>>
+			<input type="text" name="title">
 
 			<p>Card Description</p>
-			<input type="text" name="desc" value=<?php echo "$desc" ?>>
+			<input type="text" name="desc">
 
 			<input type="submit">
 		</form>
